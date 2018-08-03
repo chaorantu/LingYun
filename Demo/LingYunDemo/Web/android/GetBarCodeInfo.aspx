@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GetBarCodeInfo.aspx.cs" Inherits="LingYunDemo.Web.android.GetBarCodeInfo" %>

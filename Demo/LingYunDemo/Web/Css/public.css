@@ -1,0 +1,327 @@
+﻿/* CSS Document */
+
+/**公共部分**/
+body{margin:0; padding:0; font-size:12px; font-family:"\5FAE\8F6F\96C5\9ED1","\9ED1\4F53","\5B8B\4F53"; color:#000; background:#fff;}
+h1,h2,h3,h4,h5,h6,h7,ol,ul,li,p,img,dl,dt,dd,input,label,form,strong{margin:0; padding:0; border:0;}
+a img{border:none;}
+a:link,a:visited{color:#000; text-decoration:none;}
+a:hover{text-decoration:underline;}
+input{padding:0; border:0; height:20px;}
+
+table{border-collapse:collapse; width:100%;}
+ul,ol{list-style:none;}
+
+h1{font-size:16px;}
+h2,h3{font-size:14px; font-weight:normal;}
+h4,h5,h6{font-size:12px; font-weight:normal;}
+
+textarea{font-size:12px;}
+
+/**字体**/
+.f12{ font-size:12px;}
+.f13{ font-size:13px;}
+.f14{ font-size:14px;}
+.f15{ font-size:15px;}
+.f16{ font-size:16px;}
+.f18{ font-size:18px !important;}
+.f20{ font-size:20px !important;}
+.f24{ font-size:24px;}
+.f25{ font-size:25px;}
+.f28{ font-size:28px;} 
+.f30{ font-size:30px;} 
+.f36{ font-size:36px;} 
+.f40{ font-size:40px;} 
+.fbold{ font-weight:bold} 
+.fnormal{ font-weight:normal}
+
+.color_000{color:#000;}
+.color_fff{color:#fff;}
+.color_ccc{color:#ccc;}
+.color_red{color:red;}
+.color_D2691E{color:#D2691E;}
+.color_555{color:#555; }
+.color_3366CC{color:#3366CC; }
+.color_9DCD17{color:#9DCD17; }
+.color_FF7F00{color:#FF7F00; }
+.color_999{color:#999; }/**验证倒计时 字体颜色**/
+.color_E52228{color:#E52228; }/**logo红**/
+.color_E78A13{color:#E78A13; }/**我的X马 橘红**/
+.color_4BBED3{color:#4BBED3; }/**预定页面 蓝色字体颜色**/
+.color_FF7F02{color:#FF7F02; }/**预定页面 橘色字体颜色**/
+.color_E3BE0D{color:#E3BE0D; }/**预定页面 黄色字体颜色**/
+.color_E81F29{color:#E81F29; }/**预定页面 红色字体颜色**/
+.color_EB484B{color:#EB484B; }/**预定页面 红色字体颜色(车辆保养100套餐)**/
+/**字体结束**/
+
+/**背景色**/
+.bgcolor_ccc{background:#ccc; }
+.bgcolor_DEDEDE{background:#DEDEDE;  }
+.bgcolor_4DBDD5{background:#4DBDD5; }
+.bgcolor_FF7F00{background:#FF7F00; }
+.bgcolor_ACCE22{background:#ACCE22; }
+.bgcolor_E8E8E8{background:#E8E8E8; }
+.bgcolor_FEF200{background:#FEF200; }
+.bgcolor_ECECEC{background:#ECECEC; }
+.bgcolor_EFEFEF{background:#EFEFEF; }
+/**背景色结束**/
+
+/**边框开始**/
+.border_none{border:none !important; }
+.borderR_1_d1d1d1{border-right:1px solid #d1d1d1; }
+
+.borderB_1_d1d1d1{border-bottom:1px solid #d1d1d1; }
+.borderB_1_dadada{border-bottom:1px solid #dadada; }
+
+/**自定义**/
+.txt_left{ text-align:left;}
+.txt_right{ text-align:right;}
+.txt_center{ text-align:center;}
+.txt_top{vertical-align:top; }
+
+.fl_left{ float:left;}
+.fl_right{ float:right;}
+.fl_none{ float:none; height:0;overflow:hidden;width:100%;}
+.display_none {display:none; }
+.display_block{display:block; }
+.display_inline{display:inline; }
+.display_inline-block {display:inline-block; }
+.hide{visibility:hidden; }
+.show{visibility:visible; }
+
+.overflow_hidden{overflow:hidden; }
+
+.txt_2_idt{text-indent:2em; }
+.pointer{cursor:pointer; }
+
+/**自动换行**/
+.linebreak{word-break:break-all;word-wrap:break-word;display:inline-block; }
+
+/**位置开始**/
+.pos_relative{position:relative; }
+.pos_absolute{position:absolute; }
+/**位置结束**/
+
+/**宽度**/
+.w28{width:28px; }
+.w60{width:60px !important; }
+.w71{width:71px !important; }
+.w80{width:80px; }
+.w90{width:90px; }
+.w92{width:92px; }
+.w100 {width:100px; }
+.w102 {width:102px; }
+.w132 {width:132px !important; }
+.w145 {width:145px; }
+.w150 {width:150px; }
+.w155 {width:155px; }
+.w170 {width:170px; }
+.w184 {width:184px; }
+.w190 {width:190px; }
+.w195 {width:195px; }
+.w200 {width:200px; }
+.w230 {width:230px; }
+.w240 {width:240px; }
+.w245 {width:245px; }
+.w250 {width:250px; }
+.w270 {width:270px; }
+.w300 {width:300px; }
+.w350 {width:350px; }
+.w405 {width:405px; }
+.w420 {width:420px; }
+.w450 {width:450px; }
+.w500 {width:500px; }
+.w560 {width:560px; }
+.w670 {width:670px; }
+.w710 {width:710px; }
+.w770 {width:769px; }
+/**高度**/
+.h24 { height:24px;}
+.h30 { height:30px;}
+.h40 {height:40px; }
+.h50 {height:50px; }
+.h70 {height:70px; }
+.h80 {height:80px; }
+.h100 {height:100px !important; }
+.h125 {height:125px; }
+.h160 {height:160px; }
+.h260 {height:260px; }
+
+/**行高**/
+.line_ht24{line-height:24px !important; }
+.line_ht30{line-height:30px !important; }
+
+.mt_2{margin-top:2px;}
+.mt_4{margin-top:4px;}
+.mt_5{margin-top:5px;}
+.mt_6{margin-top:6px;}
+.mt_8{margin-top:8px;}
+.mt_10{margin-top:10px !important;}
+.mt_15{margin-top:15px;}
+.mt_20{margin-top:20px;}
+.mt_25{margin-top:25px;}
+.mt_30{margin-top:30px;}
+.mt_35{margin-top:35px;}
+.mt_40{margin-top:40px;}
+.mt_42{margin-top:42px;}     
+.mt_50{margin-top:50px;}
+.mt_60{margin-top:60px; }
+.mt_78{margin-top:78px;}     
+.mt_80{margin-top:80px; }
+.mt_85{margin-top:85px; }
+.mt_135{margin-top:135px;}
+
+.mr_2{margin-right:2px}
+.mr_4{margin-right:4px}
+.mr_6{margin-right:6px}
+.mr_10{margin-right:10px;}
+.mr_15{margin-right:15px;}
+.mr_20{margin-right:20px;}
+.mr_35{margin-right:35px;}
+.mr_205{margin-right:205px;}        
+
+.ml_10{margin-left:10px;}
+.ml_15{margin-left:15px;}
+.ml_20{margin-left:20px;}
+.ml_50{margin-left:50px;}
+.ml_104{margin-left:104px;}
+.ml_110{margin-left:110px;}
+.ml_170{margin-left:170px;}
+
+.mb_2{margin-bottom:2px;}
+.mb_10{margin-bottom:10px;}
+.mb_20{margin-bottom:20px;}
+.mb_25{margin-bottom:25px;}
+.mb_30{margin-bottom:30px;}
+.mb_45{margin-bottom:45px;}
+.mb_50{margin-bottom:50px;}         
+
+.pl_2{padding-left:2px; }
+.pl_5{padding-left:5px; }
+.pl_10{padding-left:10px; }
+.pl_15{padding-left:15px; }
+.pl_20{padding-left:20px !important; }
+.pl_30{padding-left:30px; }
+.pl_32{padding-left:32px; }
+.pl_40{padding-left:40px; }
+.pl_100{padding-left:100px; }
+.pl_110{padding-left:110px; }
+.pl_225{padding-left:225px; }
+
+.pt_5{padding-top:5px;}
+.pt_10{padding-top:10px;}
+.pt_20{padding-top:20px;}
+.pt_22{padding-top:22px; height: 19px; }
+.pt_80{padding-top:80px;}
+.pt_85{padding-top:85px;}
+
+.pr_2{padding-right:2px;}
+.pr_5{padding-right:5px;}
+.pr_10{padding-right:10px;}
+.pr_15{padding-right:15px;}
+.pr_20{padding-right:20px;}
+.pr_40{padding-right:40px;}
+.pr_50{padding-right:50px;}
+.pr_150{padding-right:150px;}
+
+.pb_5{padding-bottom:5px;}
+.pb_10{padding-bottom:10px;}
+.pb_20{padding-bottom:20px;}
+.pb_28{padding-bottom:28px;}
+
+.w_138{width:138px;}
+/**自定义**/
+
+/***阳光道客主页***/
+/**header头部样式**/
+#header{width:980px;height:60px; margin:0 auto;}
+.headerBox{height:30px;padding:25px 0 0; position:relative; }
+.logo{width:540px; height:30px;}
+.header_login{position:absolute;right:125px;top:32px; font-size:14px; }
+.header_login label{padding-left:5px; }
+.icon_cartBox{display: inline-block; position: absolute; font-size: 14px; height: 28px; line-height: 30px; bottom: 0; right: 0px; width: 115px;text-align:center; }
+.icon_cart{width:18px;height:16px;padding-left:20px !important; background:url(../../images/mall_icon_cart.png) no-repeat; cursor:pointer;}
+.icon_cart:hover{color:red; }
+.icon_cart a{color:#E52228; }
+.icon_cart a:link,.icon_cart a:visited{color:#E52228; }
+.icon_cart a:hover{text-decoration:none;color:red;  }
+
+/**content主体样式**/
+#content{width:980px; overflow:hidden; margin:0 auto; color:#8B8B8C;}
+
+/***焦点图 开始***/
+.xmFocus{height:388px;margin-top:5px; position:relative;}
+.xmFocus img{width:980px; height:388px;}
+.xmFocus a{position:absolute; display:none; left:0; top:0;}
+.xmFocus ul{position:absolute; right:414px; bottom:10px; overflow:hidden; z-index:998; margin:0 auto;}
+.xmFocus ul li{width:11px; height:11px; margin-right:5px; background:url(../images/index_focus_dot.png) no-repeat 0 0; cursor:pointer; opacity:0.3; filter:alpha(opacity=30); float:right; overflow:hidden;}
+.xmFocus ul li a{display:block; width:10px; height:10px;}
+.xmFocus .on{background:url(../images/index_focus_dot.png) no-repeat 0 -11px;}
+/***焦点图 结束***/
+
+/***阳光宝盒二维码 开始***/
+.lockScreenBox{width:480px;position:absolute; top:100px; left:450px; z-index:999;background-color:White;border-radius: 6px 6px;box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);color:#656D78; }
+.lockScreenBox_tit{height:40px;border-bottom:1px solid #ccc; position:relative; }
+.lockScreenBox_tit h1{margin:10px 0 0 20px; font-weight:bold; float:left;color:#656D78; }
+.lockScreenBox_tit a{ margin:0 0 0 450px; display:block; position:absolute; top:5px;right:20px; color:#134819;font-size:20px; font-weight:bold; cursor:pointer; }
+.lockScreenBox_tit a:link, .lockScreenBox_tit a:visited{color:#134819;}
+.lockScreenBox_tit a:hover{color:#ccc; text-decoration:none;}
+.lockScreenBox_body{padding: 10px 0; text-align:center; }
+.lockScreenBox_body img{width:370px; height:370px; }
+/**遮罩层**/
+.BOX_overlay{position: absolute;top: 0px;left: 0px; background-color:#333;z-index:100;filter: alpha(opacity=20);-moz-opacity: 0.2;opacity: 0.2; }
+/***阳光宝盒二维码 结束***/
+
+/**中间导航**/
+.midNav{height:28px; line-height:28px; font-size:12px; }
+.midNav a{display:inline-block; }
+.midNav span{width:10px; height:30px; line-height:30px; padding:0 5px;}
+
+/***底部版权***/
+#footer{width:980px;1overflow:hidden; 1margin:0 auto;margin:0 auto 40px;}
+.footerBox{width:655px; height:22px; line-height:22px; 1margin:0 auto 40px;margin:0 auto; position:relative; text-align:center; color:#898989; font-size:14px;}
+.footerBox a {color:#898989; text-decoration:none;}
+.companyImg{position:absolute;left:0; top:1px; }
+.companyName {position:absolute;right:0; }
+
+/***底部导航***/
+.bottomNav{text-align:center; font-size:14px;color:#898989;position:relative;  }
+.bottomNav ul {width:480px;height:30px; margin:0 auto; }
+.bottomNav li{width:56px; float:left; }
+.bottomNav li.w28{width:28px; }
+.bottomNav li a {color:#898989; }
+.bottomNav p img{width:187px;height:22px; }
+
+/**友情链接**/
+.otherLinks{position:relative; cursor:default; }
+.otherLinks img{position:absolute; right:-6px;bottom:2px; }
+a.otherLinks:link, a.otherLinks:visited{text-decoration:none; }
+a.otherLinks:hover{color:#000; text-decoration:none; }
+/**友情链接 菜单**/
+.otherLinks_menu {width:140px;border:1px solid #ccc;border-radius: 2px; box-shadow:0 0 10px #ccc;background:#fff; position:absolute; right:180px; bottom:30px; text-align:left;z-index:100; }
+.otherLinks_menu a {width:118px;height:40px;line-height:40px; margin:0 auto;border-bottom:1px solid #E4E7E9; display:block;text-decoration: none;color:#898989; }
+.otherLinks_menu a:hover{color:#000; }
+
+/**商城 返回顶部**/
+.goTop{width:115px;height:34px;line-height:34px;text-align:center;color:#999;font-size:16px; display:inline-block; background:url(../../images/mall_icon_goTop.png) no-repeat; }
+a.goTop:link, a.goTop:visited{color:#999; }
+a.goTop:hover{color:#898989; text-decoration:none; }
+
+/***我的X马页面 竖向滚动条***/
+.scrollY_new{overflow-y: auto;overflow-x:hidden;} /**需要配合width和height使用**/
+
+/**独有样式**/
+.noMargin{margin:0 !important;}
+/**解决图片留白**/
+.img_blank img{display:block;}
+
+/**通用样式**/
+.u_input{height:22px;line-height:22px;display:inline; border:1px solid #999999;border-radius:3px 3px;vertical-align:middle;}
+
+
+
+
+
+
+
+
+

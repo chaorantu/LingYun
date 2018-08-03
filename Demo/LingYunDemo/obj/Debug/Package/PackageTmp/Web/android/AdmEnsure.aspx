@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdmEnsure.aspx.cs" Inherits="LingYunDemo.Web.android.AdmEnsure" %>

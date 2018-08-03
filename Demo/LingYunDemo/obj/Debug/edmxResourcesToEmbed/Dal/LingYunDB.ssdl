@@ -1,0 +1,508 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LingYunModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="LingYunModelStoreContainer">
+    <EntitySet Name="Tbl_CenterStorage" EntityType="LingYunModel.Store.Tbl_CenterStorage" store:Type="Tables" store:Schema="dbo" store:Name="Tbl_CenterStorage">
+      <DefiningQuery>SELECT 
+      [Tbl_CenterStorage].[PlanID] AS [PlanID], 
+      [Tbl_CenterStorage].[MateriesTasbleID] AS [MateriesTasbleID], 
+      [Tbl_CenterStorage].[BuildID] AS [BuildID], 
+      [Tbl_CenterStorage].[BuildBatchID] AS [BuildBatchID], 
+      [Tbl_CenterStorage].[Time] AS [Time], 
+      [Tbl_CenterStorage].[ProjectName] AS [ProjectName], 
+      [Tbl_CenterStorage].[BuildName] AS [BuildName], 
+      [Tbl_CenterStorage].[MateriesID] AS [MateriesID], 
+      [Tbl_CenterStorage].[MateriesType] AS [MateriesType], 
+      [Tbl_CenterStorage].[WorkMapID] AS [WorkMapID], 
+      [Tbl_CenterStorage].[Count] AS [Count], 
+      [Tbl_CenterStorage].[PreAdmStatus] AS [PreAdmStatus], 
+      [Tbl_CenterStorage].[PreAdmTime] AS [PreAdmTime], 
+      [Tbl_CenterStorage].[NowAdmStatus] AS [NowAdmStatus], 
+      [Tbl_CenterStorage].[NowAdmTime] AS [NowAdmTime], 
+      [Tbl_CenterStorage].[ID] AS [ID], 
+      [Tbl_CenterStorage].[InCount] AS [InCount]
+      FROM [dbo].[Tbl_CenterStorage] AS [Tbl_CenterStorage]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Tbl_CenterStorageBatch" EntityType="LingYunModel.Store.Tbl_CenterStorageBatch" store:Type="Tables" store:Schema="dbo" store:Name="Tbl_CenterStorageBatch">
+      <DefiningQuery>SELECT 
+      [Tbl_CenterStorageBatch].[PlanID] AS [PlanID], 
+      [Tbl_CenterStorageBatch].[MateriesTasbleID] AS [MateriesTasbleID], 
+      [Tbl_CenterStorageBatch].[BuildID] AS [BuildID], 
+      [Tbl_CenterStorageBatch].[BuildBatchID] AS [BuildBatchID], 
+      [Tbl_CenterStorageBatch].[Time] AS [Time], 
+      [Tbl_CenterStorageBatch].[ProjectName] AS [ProjectName], 
+      [Tbl_CenterStorageBatch].[BuildName] AS [BuildName], 
+      [Tbl_CenterStorageBatch].[MateriesID] AS [MateriesID], 
+      [Tbl_CenterStorageBatch].[MateriesType] AS [MateriesType], 
+      [Tbl_CenterStorageBatch].[WorkMapID] AS [WorkMapID], 
+      [Tbl_CenterStorageBatch].[Count] AS [Count], 
+      [Tbl_CenterStorageBatch].[PreAdmStatus] AS [PreAdmStatus], 
+      [Tbl_CenterStorageBatch].[PreAdmTime] AS [PreAdmTime], 
+      [Tbl_CenterStorageBatch].[NowAdmStatus] AS [NowAdmStatus], 
+      [Tbl_CenterStorageBatch].[NowAdmTime] AS [NowAdmTime], 
+      [Tbl_CenterStorageBatch].[ID] AS [ID]
+      FROM [dbo].[Tbl_CenterStorageBatch] AS [Tbl_CenterStorageBatch]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Tbl_Materies" EntityType="LingYunModel.Store.Tbl_Materies" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_OutCenterStorage" EntityType="LingYunModel.Store.Tbl_OutCenterStorage" store:Type="Tables" store:Schema="dbo" store:Name="Tbl_OutCenterStorage">
+      <DefiningQuery>SELECT 
+      [Tbl_OutCenterStorage].[PlanID] AS [PlanID], 
+      [Tbl_OutCenterStorage].[MateriesTasbleID] AS [MateriesTasbleID], 
+      [Tbl_OutCenterStorage].[BuildID] AS [BuildID], 
+      [Tbl_OutCenterStorage].[BuildBatchID] AS [BuildBatchID], 
+      [Tbl_OutCenterStorage].[Time] AS [Time], 
+      [Tbl_OutCenterStorage].[ProjectName] AS [ProjectName], 
+      [Tbl_OutCenterStorage].[BuildName] AS [BuildName], 
+      [Tbl_OutCenterStorage].[MateriesID] AS [MateriesID], 
+      [Tbl_OutCenterStorage].[MateriesType] AS [MateriesType], 
+      [Tbl_OutCenterStorage].[WorkMapID] AS [WorkMapID], 
+      [Tbl_OutCenterStorage].[Count] AS [Count], 
+      [Tbl_OutCenterStorage].[PreAdmStatus] AS [PreAdmStatus], 
+      [Tbl_OutCenterStorage].[PreAdmTime] AS [PreAdmTime], 
+      [Tbl_OutCenterStorage].[NowAdmStatus] AS [NowAdmStatus], 
+      [Tbl_OutCenterStorage].[NowAdmTime] AS [NowAdmTime], 
+      [Tbl_OutCenterStorage].[ID] AS [ID]
+      FROM [dbo].[Tbl_OutCenterStorage] AS [Tbl_OutCenterStorage]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Tbl_OutProductBatch" EntityType="LingYunModel.Store.Tbl_OutProductBatch" store:Type="Tables" store:Schema="dbo" store:Name="Tbl_OutProductBatch">
+      <DefiningQuery>SELECT 
+      [Tbl_OutProductBatch].[PlanID] AS [PlanID], 
+      [Tbl_OutProductBatch].[MateriesTasbleID] AS [MateriesTasbleID], 
+      [Tbl_OutProductBatch].[BuildID] AS [BuildID], 
+      [Tbl_OutProductBatch].[BuildBatchID] AS [BuildBatchID], 
+      [Tbl_OutProductBatch].[Time] AS [Time], 
+      [Tbl_OutProductBatch].[ProjectName] AS [ProjectName], 
+      [Tbl_OutProductBatch].[BuildName] AS [BuildName], 
+      [Tbl_OutProductBatch].[MateriesID] AS [MateriesID], 
+      [Tbl_OutProductBatch].[MateriesType] AS [MateriesType], 
+      [Tbl_OutProductBatch].[WorkMapID] AS [WorkMapID], 
+      [Tbl_OutProductBatch].[Count] AS [Count], 
+      [Tbl_OutProductBatch].[PreAdmStatus] AS [PreAdmStatus], 
+      [Tbl_OutProductBatch].[PreAdmTime] AS [PreAdmTime], 
+      [Tbl_OutProductBatch].[NowAdmStatus] AS [NowAdmStatus], 
+      [Tbl_OutProductBatch].[NowAdmTime] AS [NowAdmTime], 
+      [Tbl_OutProductBatch].[ID] AS [ID]
+      FROM [dbo].[Tbl_OutProductBatch] AS [Tbl_OutProductBatch]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Tbl_OutSiteStorage" EntityType="LingYunModel.Store.Tbl_OutSiteStorage" store:Type="Tables" store:Schema="dbo" store:Name="Tbl_OutSiteStorage">
+      <DefiningQuery>SELECT 
+      [Tbl_OutSiteStorage].[PlanID] AS [PlanID], 
+      [Tbl_OutSiteStorage].[MateriesTasbleID] AS [MateriesTasbleID], 
+      [Tbl_OutSiteStorage].[BuildID] AS [BuildID], 
+      [Tbl_OutSiteStorage].[BuildBatchID] AS [BuildBatchID], 
+      [Tbl_OutSiteStorage].[Time] AS [Time], 
+      [Tbl_OutSiteStorage].[ProjectName] AS [ProjectName], 
+      [Tbl_OutSiteStorage].[BuildName] AS [BuildName], 
+      [Tbl_OutSiteStorage].[MateriesID] AS [MateriesID], 
+      [Tbl_OutSiteStorage].[MateriesType] AS [MateriesType], 
+      [Tbl_OutSiteStorage].[WorkMapID] AS [WorkMapID], 
+      [Tbl_OutSiteStorage].[Count] AS [Count], 
+      [Tbl_OutSiteStorage].[PreAdmStatus] AS [PreAdmStatus], 
+      [Tbl_OutSiteStorage].[PreAdmTime] AS [PreAdmTime], 
+      [Tbl_OutSiteStorage].[NowAdmStatus] AS [NowAdmStatus], 
+      [Tbl_OutSiteStorage].[NowAdmTime] AS [NowAdmTime], 
+      [Tbl_OutSiteStorage].[ID] AS [ID]
+      FROM [dbo].[Tbl_OutSiteStorage] AS [Tbl_OutSiteStorage]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Tbl_Plan" EntityType="LingYunModel.Store.Tbl_Plan" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_ProductBatch" EntityType="LingYunModel.Store.Tbl_ProductBatch" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_ProductStorage" EntityType="LingYunModel.Store.Tbl_ProductStorage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_SiteStorage" EntityType="LingYunModel.Store.Tbl_SiteStorage" store:Type="Tables" store:Schema="dbo" store:Name="Tbl_SiteStorage">
+      <DefiningQuery>SELECT 
+      [Tbl_SiteStorage].[PlanID] AS [PlanID], 
+      [Tbl_SiteStorage].[MateriesTasbleID] AS [MateriesTasbleID], 
+      [Tbl_SiteStorage].[BuildID] AS [BuildID], 
+      [Tbl_SiteStorage].[BuildBatchID] AS [BuildBatchID], 
+      [Tbl_SiteStorage].[Time] AS [Time], 
+      [Tbl_SiteStorage].[ProjectName] AS [ProjectName], 
+      [Tbl_SiteStorage].[BuildName] AS [BuildName], 
+      [Tbl_SiteStorage].[MateriesID] AS [MateriesID], 
+      [Tbl_SiteStorage].[MateriesType] AS [MateriesType], 
+      [Tbl_SiteStorage].[WorkMapID] AS [WorkMapID], 
+      [Tbl_SiteStorage].[Count] AS [Count], 
+      [Tbl_SiteStorage].[PreAdmStatus] AS [PreAdmStatus], 
+      [Tbl_SiteStorage].[PreAdmTime] AS [PreAdmTime], 
+      [Tbl_SiteStorage].[NowAdmStatus] AS [NowAdmStatus], 
+      [Tbl_SiteStorage].[NowAdmTime] AS [NowAdmTime], 
+      [Tbl_SiteStorage].[ID] AS [ID], 
+      [Tbl_SiteStorage].[InCount] AS [InCount]
+      FROM [dbo].[Tbl_SiteStorage] AS [Tbl_SiteStorage]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Tbl_SiteStorageBatch" EntityType="LingYunModel.Store.Tbl_SiteStorageBatch" store:Type="Tables" store:Schema="dbo" store:Name="Tbl_SiteStorageBatch">
+      <DefiningQuery>SELECT 
+      [Tbl_SiteStorageBatch].[PlanID] AS [PlanID], 
+      [Tbl_SiteStorageBatch].[MateriesTasbleID] AS [MateriesTasbleID], 
+      [Tbl_SiteStorageBatch].[BuildID] AS [BuildID], 
+      [Tbl_SiteStorageBatch].[BuildBatchID] AS [BuildBatchID], 
+      [Tbl_SiteStorageBatch].[Time] AS [Time], 
+      [Tbl_SiteStorageBatch].[ProjectName] AS [ProjectName], 
+      [Tbl_SiteStorageBatch].[BuildName] AS [BuildName], 
+      [Tbl_SiteStorageBatch].[MateriesID] AS [MateriesID], 
+      [Tbl_SiteStorageBatch].[MateriesType] AS [MateriesType], 
+      [Tbl_SiteStorageBatch].[WorkMapID] AS [WorkMapID], 
+      [Tbl_SiteStorageBatch].[Count] AS [Count], 
+      [Tbl_SiteStorageBatch].[PreAdmStatus] AS [PreAdmStatus], 
+      [Tbl_SiteStorageBatch].[PreAdmTime] AS [PreAdmTime], 
+      [Tbl_SiteStorageBatch].[NowAdmStatus] AS [NowAdmStatus], 
+      [Tbl_SiteStorageBatch].[NowAdmTime] AS [NowAdmTime], 
+      [Tbl_SiteStorageBatch].[ID] AS [ID]
+      FROM [dbo].[Tbl_SiteStorageBatch] AS [Tbl_SiteStorageBatch]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Tbl_User" EntityType="LingYunModel.Store.Tbl_User" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“LingYun.dbo.Tbl_CenterStorage”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="Tbl_CenterStorage">
+    <Key>
+      <PropertyRef Name="PlanID" />
+      <PropertyRef Name="MateriesTasbleID" />
+      <PropertyRef Name="BuildID" />
+      <PropertyRef Name="BuildBatchID" />
+      <PropertyRef Name="ProjectName" />
+      <PropertyRef Name="BuildName" />
+      <PropertyRef Name="MateriesID" />
+      <PropertyRef Name="MateriesType" />
+      <PropertyRef Name="WorkMapID" />
+      <PropertyRef Name="Count" />
+      <PropertyRef Name="PreAdmStatus" />
+      <PropertyRef Name="NowAdmStatus" />
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="PlanID" Type="int" Nullable="false" />
+    <Property Name="MateriesTasbleID" Type="int" Nullable="false" />
+    <Property Name="BuildID" Type="int" Nullable="false" />
+    <Property Name="BuildBatchID" Type="int" Nullable="false" />
+    <Property Name="Time" Type="datetime" />
+    <Property Name="ProjectName" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="BuildName" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="MateriesID" Type="int" Nullable="false" />
+    <Property Name="MateriesType" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="WorkMapID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Count" Type="int" Nullable="false" />
+    <Property Name="PreAdmStatus" Type="int" Nullable="false" />
+    <Property Name="PreAdmTime" Type="datetime" />
+    <Property Name="NowAdmStatus" Type="int" Nullable="false" />
+    <Property Name="NowAdmTime" Type="datetime" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="InCount" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“LingYun.dbo.Tbl_CenterStorageBatch”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="Tbl_CenterStorageBatch">
+    <Key>
+      <PropertyRef Name="PlanID" />
+      <PropertyRef Name="MateriesTasbleID" />
+      <PropertyRef Name="BuildID" />
+      <PropertyRef Name="BuildBatchID" />
+      <PropertyRef Name="ProjectName" />
+      <PropertyRef Name="BuildName" />
+      <PropertyRef Name="MateriesID" />
+      <PropertyRef Name="MateriesType" />
+      <PropertyRef Name="WorkMapID" />
+      <PropertyRef Name="Count" />
+      <PropertyRef Name="PreAdmStatus" />
+      <PropertyRef Name="NowAdmStatus" />
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="PlanID" Type="int" Nullable="false" />
+    <Property Name="MateriesTasbleID" Type="int" Nullable="false" />
+    <Property Name="BuildID" Type="int" Nullable="false" />
+    <Property Name="BuildBatchID" Type="int" Nullable="false" />
+    <Property Name="Time" Type="datetime" />
+    <Property Name="ProjectName" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="BuildName" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="MateriesID" Type="int" Nullable="false" />
+    <Property Name="MateriesType" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="WorkMapID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Count" Type="int" Nullable="false" />
+    <Property Name="PreAdmStatus" Type="int" Nullable="false" />
+    <Property Name="PreAdmTime" Type="datetime" />
+    <Property Name="NowAdmStatus" Type="int" Nullable="false" />
+    <Property Name="NowAdmTime" Type="datetime" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Tbl_Materies">
+    <Key>
+      <PropertyRef Name="MateriesID" />
+    </Key>
+    <Property Name="PlanID" Type="int" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="BuildNum" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ProjectName" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="BuildName" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="MateriesType" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="ProcessingNum" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="TotalNum" Type="int" Nullable="false" />
+    <Property Name="BeforeAdmStatus" Type="int" Nullable="false" />
+    <Property Name="NowAdmStatus" Type="int" Nullable="false" />
+    <Property Name="PreDate" Type="nvarchar" MaxLength="60" />
+    <Property Name="NowDate" Type="nvarchar" MaxLength="60" />
+    <Property Name="MateriesID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“LingYun.dbo.Tbl_OutCenterStorage”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="Tbl_OutCenterStorage">
+    <Key>
+      <PropertyRef Name="PlanID" />
+      <PropertyRef Name="MateriesTasbleID" />
+      <PropertyRef Name="BuildID" />
+      <PropertyRef Name="BuildBatchID" />
+      <PropertyRef Name="ProjectName" />
+      <PropertyRef Name="BuildName" />
+      <PropertyRef Name="MateriesID" />
+      <PropertyRef Name="MateriesType" />
+      <PropertyRef Name="WorkMapID" />
+      <PropertyRef Name="Count" />
+      <PropertyRef Name="PreAdmStatus" />
+      <PropertyRef Name="NowAdmStatus" />
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="PlanID" Type="int" Nullable="false" />
+    <Property Name="MateriesTasbleID" Type="int" Nullable="false" />
+    <Property Name="BuildID" Type="int" Nullable="false" />
+    <Property Name="BuildBatchID" Type="int" Nullable="false" />
+    <Property Name="Time" Type="datetime" />
+    <Property Name="ProjectName" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="BuildName" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="MateriesID" Type="int" Nullable="false" />
+    <Property Name="MateriesType" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="WorkMapID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Count" Type="int" Nullable="false" />
+    <Property Name="PreAdmStatus" Type="int" Nullable="false" />
+    <Property Name="PreAdmTime" Type="datetime" />
+    <Property Name="NowAdmStatus" Type="int" Nullable="false" />
+    <Property Name="NowAdmTime" Type="datetime" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“LingYun.dbo.Tbl_OutProductBatch”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="Tbl_OutProductBatch">
+    <Key>
+      <PropertyRef Name="PlanID" />
+      <PropertyRef Name="MateriesTasbleID" />
+      <PropertyRef Name="BuildID" />
+      <PropertyRef Name="BuildBatchID" />
+      <PropertyRef Name="ProjectName" />
+      <PropertyRef Name="BuildName" />
+      <PropertyRef Name="MateriesID" />
+      <PropertyRef Name="MateriesType" />
+      <PropertyRef Name="WorkMapID" />
+      <PropertyRef Name="Count" />
+      <PropertyRef Name="PreAdmStatus" />
+      <PropertyRef Name="NowAdmStatus" />
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="PlanID" Type="int" Nullable="false" />
+    <Property Name="MateriesTasbleID" Type="int" Nullable="false" />
+    <Property Name="BuildID" Type="int" Nullable="false" />
+    <Property Name="BuildBatchID" Type="int" Nullable="false" />
+    <Property Name="Time" Type="datetime" />
+    <Property Name="ProjectName" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="BuildName" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="MateriesID" Type="int" Nullable="false" />
+    <Property Name="MateriesType" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="WorkMapID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Count" Type="int" Nullable="false" />
+    <Property Name="PreAdmStatus" Type="int" Nullable="false" />
+    <Property Name="PreAdmTime" Type="datetime" />
+    <Property Name="NowAdmStatus" Type="int" Nullable="false" />
+    <Property Name="NowAdmTime" Type="datetime" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“LingYun.dbo.Tbl_OutSiteStorage”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="Tbl_OutSiteStorage">
+    <Key>
+      <PropertyRef Name="PlanID" />
+      <PropertyRef Name="MateriesTasbleID" />
+      <PropertyRef Name="BuildID" />
+      <PropertyRef Name="BuildBatchID" />
+      <PropertyRef Name="ProjectName" />
+      <PropertyRef Name="BuildName" />
+      <PropertyRef Name="MateriesID" />
+      <PropertyRef Name="MateriesType" />
+      <PropertyRef Name="WorkMapID" />
+      <PropertyRef Name="Count" />
+      <PropertyRef Name="PreAdmStatus" />
+      <PropertyRef Name="NowAdmStatus" />
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="PlanID" Type="int" Nullable="false" />
+    <Property Name="MateriesTasbleID" Type="int" Nullable="false" />
+    <Property Name="BuildID" Type="int" Nullable="false" />
+    <Property Name="BuildBatchID" Type="int" Nullable="false" />
+    <Property Name="Time" Type="datetime" />
+    <Property Name="ProjectName" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="BuildName" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="MateriesID" Type="int" Nullable="false" />
+    <Property Name="MateriesType" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="WorkMapID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Count" Type="int" Nullable="false" />
+    <Property Name="PreAdmStatus" Type="int" Nullable="false" />
+    <Property Name="PreAdmTime" Type="datetime" />
+    <Property Name="NowAdmStatus" Type="int" Nullable="false" />
+    <Property Name="NowAdmTime" Type="datetime" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Tbl_Plan">
+    <Key>
+      <PropertyRef Name="PlanID" />
+    </Key>
+    <Property Name="PlanID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PlanDate" Type="date" Nullable="false" />
+    <Property Name="Planer" Type="int" />
+    <Property Name="PlanerStatus" Type="int" Nullable="false" />
+    <Property Name="PlanAdm" Type="int" />
+    <Property Name="PlanAdmStatus" Type="int" Nullable="false" />
+    <Property Name="DesignAdm" Type="int" />
+    <Property Name="DesignAdmStatus" Type="int" Nullable="false" />
+    <Property Name="ProductAdm" Type="int" />
+    <Property Name="ProductAdmStatus" Type="int" Nullable="false" />
+    <Property Name="CenterStorageAdm" Type="int" />
+    <Property Name="CenterStorageAdmStatus" Type="int" Nullable="false" />
+    <Property Name="SiteStorageAdm" Type="int" />
+    <Property Name="SiteStorageAdmStatus" Type="int" Nullable="false" />
+    <Property Name="SiteGetAdm" Type="int" />
+    <Property Name="SiteGetAdmStatus" Type="int" />
+  </EntityType>
+  <EntityType Name="Tbl_ProductBatch">
+    <Key>
+      <PropertyRef Name="BuildBatchID" />
+    </Key>
+    <Property Name="PlanID" Type="int" Nullable="false" />
+    <Property Name="MateriesTasbleID" Type="int" Nullable="false" />
+    <Property Name="BuildID" Type="int" Nullable="false" />
+    <Property Name="Time" Type="datetime" />
+    <Property Name="ProjectName" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="BuildName" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="MateriesID" Type="int" Nullable="false" />
+    <Property Name="MateriesType" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="WorkMapID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Count" Type="int" Nullable="false" />
+    <Property Name="PreAdmStatus" Type="int" Nullable="false" />
+    <Property Name="PreAdmTime" Type="datetime" />
+    <Property Name="NowAdmStatus" Type="int" Nullable="false" />
+    <Property Name="NowAdmTime" Type="datetime" />
+    <Property Name="BuildBatchID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Tbl_ProductStorage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="PlanID" Type="int" Nullable="false" />
+    <Property Name="MateriesTasbleID" Type="int" Nullable="false" />
+    <Property Name="BuildID" Type="int" Nullable="false" />
+    <Property Name="BuildBatchID" Type="int" Nullable="false" />
+    <Property Name="Time" Type="datetime" />
+    <Property Name="ProjectName" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="BuildName" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="MateriesID" Type="int" Nullable="false" />
+    <Property Name="MateriesType" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="WorkMapID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Count" Type="int" Nullable="false" />
+    <Property Name="PreAdmStatus" Type="int" Nullable="false" />
+    <Property Name="PreAdmTime" Type="datetime" />
+    <Property Name="NowAdmStatus" Type="int" Nullable="false" />
+    <Property Name="NowAdmTime" Type="datetime" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="InCount" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“LingYun.dbo.Tbl_SiteStorage”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="Tbl_SiteStorage">
+    <Key>
+      <PropertyRef Name="PlanID" />
+      <PropertyRef Name="MateriesTasbleID" />
+      <PropertyRef Name="BuildID" />
+      <PropertyRef Name="BuildBatchID" />
+      <PropertyRef Name="ProjectName" />
+      <PropertyRef Name="BuildName" />
+      <PropertyRef Name="MateriesID" />
+      <PropertyRef Name="MateriesType" />
+      <PropertyRef Name="WorkMapID" />
+      <PropertyRef Name="Count" />
+      <PropertyRef Name="PreAdmStatus" />
+      <PropertyRef Name="NowAdmStatus" />
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="PlanID" Type="int" Nullable="false" />
+    <Property Name="MateriesTasbleID" Type="int" Nullable="false" />
+    <Property Name="BuildID" Type="int" Nullable="false" />
+    <Property Name="BuildBatchID" Type="int" Nullable="false" />
+    <Property Name="Time" Type="datetime" />
+    <Property Name="ProjectName" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="BuildName" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="MateriesID" Type="int" Nullable="false" />
+    <Property Name="MateriesType" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="WorkMapID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Count" Type="int" Nullable="false" />
+    <Property Name="PreAdmStatus" Type="int" Nullable="false" />
+    <Property Name="PreAdmTime" Type="datetime" />
+    <Property Name="NowAdmStatus" Type="int" Nullable="false" />
+    <Property Name="NowAdmTime" Type="datetime" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="InCount" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“LingYun.dbo.Tbl_SiteStorageBatch”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="Tbl_SiteStorageBatch">
+    <Key>
+      <PropertyRef Name="PlanID" />
+      <PropertyRef Name="MateriesTasbleID" />
+      <PropertyRef Name="BuildID" />
+      <PropertyRef Name="BuildBatchID" />
+      <PropertyRef Name="ProjectName" />
+      <PropertyRef Name="BuildName" />
+      <PropertyRef Name="MateriesID" />
+      <PropertyRef Name="MateriesType" />
+      <PropertyRef Name="WorkMapID" />
+      <PropertyRef Name="Count" />
+      <PropertyRef Name="PreAdmStatus" />
+      <PropertyRef Name="NowAdmStatus" />
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="PlanID" Type="int" Nullable="false" />
+    <Property Name="MateriesTasbleID" Type="int" Nullable="false" />
+    <Property Name="BuildID" Type="int" Nullable="false" />
+    <Property Name="BuildBatchID" Type="int" Nullable="false" />
+    <Property Name="Time" Type="datetime" />
+    <Property Name="ProjectName" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="BuildName" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="MateriesID" Type="int" Nullable="false" />
+    <Property Name="MateriesType" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="WorkMapID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Count" Type="int" Nullable="false" />
+    <Property Name="PreAdmStatus" Type="int" Nullable="false" />
+    <Property Name="PreAdmTime" Type="datetime" />
+    <Property Name="NowAdmStatus" Type="int" Nullable="false" />
+    <Property Name="NowAdmTime" Type="datetime" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Tbl_User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="LoginPwd" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="CheckPwd" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="APP" Type="nvarchar" MaxLength="60" />
+    <Property Name="Access" Type="int" Nullable="false" />
+    <Property Name="LoginPwd1" Type="nvarchar" MaxLength="60" />
+    <Property Name="LoginPwd2" Type="nvarchar" MaxLength="60" />
+    <Property Name="LoginPwd3" Type="nvarchar" MaxLength="60" />
+    <Property Name="LoginPwd4" Type="nvarchar" MaxLength="60" />
+    <Property Name="LoginPwd5" Type="nvarchar" MaxLength="60" />
+    <Property Name="LoginPwd6" Type="nvarchar" MaxLength="60" />
+    <Property Name="LoginPwd7" Type="nvarchar" MaxLength="60" />
+    <Property Name="LoginPwd8" Type="nvarchar" MaxLength="60" />
+    <Property Name="LoginPwd9" Type="nvarchar" MaxLength="60" />
+    <Property Name="LoginPwd10" Type="nvarchar" MaxLength="60" />
+  </EntityType>
+</Schema>

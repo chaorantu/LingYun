@@ -1,0 +1,899 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="LingYunModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="LingYunModelStoreContainer">
+          <EntitySet Name="sysdiagrams" EntityType="LingYunModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_BarCodeBatch" EntityType="LingYunModel.Store.Tbl_BarCodeBatch" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_BarCodeInfo" EntityType="LingYunModel.Store.Tbl_BarCodeInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_CenterStorage" EntityType="LingYunModel.Store.Tbl_CenterStorage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_CenterStorageBatch" EntityType="LingYunModel.Store.Tbl_CenterStorageBatch" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_InMaries" EntityType="LingYunModel.Store.Tbl_InMaries" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_Materies" EntityType="LingYunModel.Store.Tbl_Materies" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_OutCenterStorage" EntityType="LingYunModel.Store.Tbl_OutCenterStorage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_OutProductBatch" EntityType="LingYunModel.Store.Tbl_OutProductBatch" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_OutSiteStorage" EntityType="LingYunModel.Store.Tbl_OutSiteStorage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_ProductBatch" EntityType="LingYunModel.Store.Tbl_ProductBatch" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_ProductStorage" EntityType="LingYunModel.Store.Tbl_ProductStorage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_Project" EntityType="LingYunModel.Store.Tbl_Project" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_SiteStorage" EntityType="LingYunModel.Store.Tbl_SiteStorage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_SiteStorageBatch" EntityType="LingYunModel.Store.Tbl_SiteStorageBatch" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_User" EntityType="LingYunModel.Store.Tbl_User" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Tbl_BarCodeBatch">
+          <Key>
+            <PropertyRef Name="BarCodeBatchID" />
+          </Key>
+          <Property Name="BarCodeBatchID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BuildBatchID" Type="bigint" Nullable="false" />
+          <Property Name="BarCodeNo" Type="nvarchar" Nullable="false" MaxLength="12" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="BarCodeType" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tbl_BarCodeInfo">
+          <Key>
+            <PropertyRef Name="BarCodeInfoID" />
+          </Key>
+          <Property Name="BarCodeInfoID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BarCodeBatchID" Type="bigint" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="ProjectName" Type="nvarchar" Nullable="false" MaxLength="60" />
+          <Property Name="BuildName" Type="nvarchar" Nullable="false" MaxLength="60" />
+          <Property Name="MateriesType" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="WorkMapID" Type="nvarchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Tbl_CenterStorage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectID" Type="bigint" Nullable="false" />
+          <Property Name="ProjectName" Type="nvarchar" Nullable="false" MaxLength="60" />
+          <Property Name="MateriesID" Type="bigint" Nullable="false" />
+          <Property Name="InBuildBatchID" Type="nvarchar" MaxLength="200" />
+          <Property Name="OutBuildBatchID" Type="nvarchar" MaxLength="200" />
+          <Property Name="BuildNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="MateriesTypeNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="ProcessingNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="InCount" Type="bigint" />
+          <Property Name="OutCount" Type="bigint" />
+          <Property Name="BuildName" Type="nvarchar" MaxLength="60" />
+          <Property Name="PreAdmStatus" Type="int" />
+          <Property Name="PreAdmTime" Type="datetime" />
+          <Property Name="NowAdmStatus" Type="int" />
+          <Property Name="NowAdmTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Tbl_CenterStorageBatch">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectID" Type="bigint" Nullable="false" />
+          <Property Name="ProjectName" Type="nvarchar" MaxLength="200" />
+          <Property Name="MateriesID" Type="bigint" Nullable="false" />
+          <Property Name="BuildBatchID" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="BuildNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="MateriesTypeNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="Count" Type="bigint" />
+          <Property Name="ProcessingNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="BuildName" Type="nvarchar" MaxLength="60" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="PreAdmStatus" Type="bigint" />
+          <Property Name="PreAdmTime" Type="datetime" />
+          <Property Name="NowAdmStatus" Type="bigint" />
+          <Property Name="NowAdmTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Tbl_InMaries">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="TableName" Type="nvarchar(max)" />
+          <Property Name="Num" Type="int" />
+          <Property Name="MapId" Type="nvarchar(max)" />
+          <Property Name="BuildId" Type="nvarchar(max)" />
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Count" Type="int" />
+        </EntityType>
+        <EntityType Name="Tbl_Materies">
+          <Key>
+            <PropertyRef Name="MateriesID" />
+          </Key>
+          <Property Name="ProjectID" Type="bigint" Nullable="false" />
+          <Property Name="MateriesID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="BuildNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="ProcessingNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="Count" Type="bigint" />
+          <Property Name="MateriesTypeNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="BuildName" Type="nvarchar" MaxLength="60" />
+          <Property Name="ProjectName" Type="nvarchar" MaxLength="60" />
+          <Property Name="PreAdmStatus" Type="bigint" />
+          <Property Name="NowAdmStatus" Type="bigint" />
+          <Property Name="PreDate" Type="datetime" />
+          <Property Name="NowDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Tbl_OutCenterStorage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectID" Type="bigint" Nullable="false" />
+          <Property Name="ProjectName" Type="nvarchar" MaxLength="200" />
+          <Property Name="MateriesID" Type="bigint" Nullable="false" />
+          <Property Name="BuildBatchID" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="BuildNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="MateriesTypeNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="Count" Type="bigint" />
+          <Property Name="ProcessingNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="BuildName" Type="nvarchar" MaxLength="60" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="PreAdmStatus" Type="bigint" />
+          <Property Name="PreAdmTime" Type="datetime" />
+          <Property Name="NowAdmStatus" Type="bigint" />
+          <Property Name="NowAdmTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Tbl_OutProductBatch">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectID" Type="bigint" Nullable="false" />
+          <Property Name="ProjectName" Type="nvarchar" MaxLength="200" />
+          <Property Name="MateriesID" Type="bigint" Nullable="false" />
+          <Property Name="BuildBatchID" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="BuildNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="MateriesTypeNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="Count" Type="bigint" />
+          <Property Name="ProcessingNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="BuildName" Type="nvarchar" MaxLength="60" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="PreAdmStatus" Type="bigint" />
+          <Property Name="PreAdmTime" Type="datetime" />
+          <Property Name="NowAdmStatus" Type="bigint" />
+          <Property Name="NowAdmTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Tbl_OutSiteStorage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectID" Type="bigint" Nullable="false" />
+          <Property Name="ProjectName" Type="nvarchar" MaxLength="200" />
+          <Property Name="MateriesID" Type="bigint" Nullable="false" />
+          <Property Name="BuildBatchID" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="BuildNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="MateriesTypeNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="Count" Type="bigint" />
+          <Property Name="ProcessingNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="BuildName" Type="nvarchar" MaxLength="60" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="PreAdmStatus" Type="bigint" />
+          <Property Name="PreAdmTime" Type="datetime" />
+          <Property Name="NowAdmStatus" Type="bigint" />
+          <Property Name="NowAdmTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Tbl_ProductBatch">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectID" Type="bigint" Nullable="false" />
+          <Property Name="ProjectName" Type="nvarchar" MaxLength="200" />
+          <Property Name="MateriesID" Type="bigint" Nullable="false" />
+          <Property Name="BuildBatchID" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="BuildNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="MateriesTypeNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="Count" Type="bigint" />
+          <Property Name="ProcessingNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="BuildName" Type="nvarchar" MaxLength="60" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="PreAdmStatus" Type="bigint" />
+          <Property Name="PreAdmTime" Type="datetime" />
+          <Property Name="NowAdmStatus" Type="bigint" />
+          <Property Name="NowAdmTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Tbl_ProductStorage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectID" Type="bigint" Nullable="false" />
+          <Property Name="ProjectName" Type="nvarchar" Nullable="false" MaxLength="60" />
+          <Property Name="MateriesID" Type="bigint" Nullable="false" />
+          <Property Name="InBuildBatchID" Type="nvarchar" MaxLength="200" />
+          <Property Name="OutBuildBatchID" Type="nvarchar" MaxLength="200" />
+          <Property Name="BuildNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="MateriesTypeNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="ProcessingNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="InCount" Type="bigint" />
+          <Property Name="OutCount" Type="bigint" />
+          <Property Name="BuildName" Type="nvarchar" MaxLength="60" />
+          <Property Name="PreAdmStatus" Type="int" />
+          <Property Name="PreAdmTime" Type="datetime" />
+          <Property Name="NowAdmStatus" Type="int" />
+          <Property Name="NowAdmTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Tbl_Project">
+          <Key>
+            <PropertyRef Name="ProjectID" />
+          </Key>
+          <Property Name="ProjectID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectDate" Type="datetime" />
+          <Property Name="ProjectAdm" Type="bigint" />
+          <Property Name="ProjectAdmStatus" Type="int" />
+          <Property Name="DesignAdm" Type="bigint" />
+          <Property Name="DesignAdmStatus" Type="int" />
+          <Property Name="ProductAdm" Type="bigint" />
+          <Property Name="ProductAdmStatus" Type="int" />
+          <Property Name="CenterStorageAdm" Type="bigint" />
+          <Property Name="CenterStorageAdmStatus" Type="int" />
+          <Property Name="SiteStorageAdm" Type="bigint" />
+          <Property Name="SiteStorageAdmStatus" Type="int" />
+          <Property Name="SiteGetAdm" Type="bigint" />
+          <Property Name="SiteGetAdmStatus" Type="int" />
+          <Property Name="ProjectName" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Tbl_SiteStorage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectID" Type="bigint" Nullable="false" />
+          <Property Name="ProjectName" Type="nvarchar" Nullable="false" MaxLength="60" />
+          <Property Name="MateriesID" Type="bigint" Nullable="false" />
+          <Property Name="InBuildBatchID" Type="nvarchar" MaxLength="200" />
+          <Property Name="OutBuildBatchID" Type="nvarchar" MaxLength="200" />
+          <Property Name="BuildNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="MateriesTypeNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="ProcessingNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="InCount" Type="bigint" />
+          <Property Name="OutCount" Type="bigint" />
+          <Property Name="BuildName" Type="nvarchar" MaxLength="60" />
+          <Property Name="PreAdmStatus" Type="int" />
+          <Property Name="PreAdmTime" Type="datetime" />
+          <Property Name="NowAdmStatus" Type="int" />
+          <Property Name="NowAdmTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Tbl_SiteStorageBatch">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectID" Type="bigint" Nullable="false" />
+          <Property Name="ProjectName" Type="nvarchar" MaxLength="200" />
+          <Property Name="MateriesID" Type="bigint" Nullable="false" />
+          <Property Name="BuildBatchID" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="BuildNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="MateriesTypeNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="Count" Type="bigint" />
+          <Property Name="ProcessingNum" Type="nvarchar" MaxLength="60" />
+          <Property Name="BuildName" Type="nvarchar" MaxLength="60" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="PreAdmStatus" Type="bigint" />
+          <Property Name="PreAdmTime" Type="datetime" />
+          <Property Name="NowAdmStatus" Type="bigint" />
+          <Property Name="NowAdmTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Tbl_User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="60" />
+          <Property Name="CheckPwd" Type="nvarchar" Nullable="false" MaxLength="60" />
+          <Property Name="APP" Type="nvarchar" MaxLength="60" />
+          <Property Name="Access" Type="int" Nullable="false" />
+          <Property Name="LoginPwd1" Type="nvarchar" MaxLength="60" />
+          <Property Name="LoginPwd2" Type="nvarchar" MaxLength="60" />
+          <Property Name="LoginPwd3" Type="nvarchar" MaxLength="60" />
+          <Property Name="LoginPwd4" Type="nvarchar" MaxLength="60" />
+          <Property Name="LoginPwd5" Type="nvarchar" MaxLength="60" />
+          <Property Name="LoginPwd6" Type="nvarchar" MaxLength="60" />
+          <Property Name="LoginPwd7" Type="nvarchar" MaxLength="60" />
+          <Property Name="LoginPwd8" Type="nvarchar" MaxLength="60" />
+          <Property Name="LoginPwd9" Type="nvarchar" MaxLength="60" />
+          <Property Name="LoginPwd10" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LingYunModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="LingYunEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="LingYunModel.sysdiagrams" />
+          <EntitySet Name="Tbl_BarCodeBatch" EntityType="LingYunModel.Tbl_BarCodeBatch" />
+          <EntitySet Name="Tbl_BarCodeInfo" EntityType="LingYunModel.Tbl_BarCodeInfo" />
+          <EntitySet Name="Tbl_CenterStorage" EntityType="LingYunModel.Tbl_CenterStorage" />
+          <EntitySet Name="Tbl_CenterStorageBatch" EntityType="LingYunModel.Tbl_CenterStorageBatch" />
+          <EntitySet Name="Tbl_InMaries" EntityType="LingYunModel.Tbl_InMaries" />
+          <EntitySet Name="Tbl_Materies" EntityType="LingYunModel.Tbl_Materies" />
+          <EntitySet Name="Tbl_OutCenterStorage" EntityType="LingYunModel.Tbl_OutCenterStorage" />
+          <EntitySet Name="Tbl_OutProductBatch" EntityType="LingYunModel.Tbl_OutProductBatch" />
+          <EntitySet Name="Tbl_OutSiteStorage" EntityType="LingYunModel.Tbl_OutSiteStorage" />
+          <EntitySet Name="Tbl_ProductBatch" EntityType="LingYunModel.Tbl_ProductBatch" />
+          <EntitySet Name="Tbl_ProductStorage" EntityType="LingYunModel.Tbl_ProductStorage" />
+          <EntitySet Name="Tbl_Project" EntityType="LingYunModel.Tbl_Project" />
+          <EntitySet Name="Tbl_SiteStorage" EntityType="LingYunModel.Tbl_SiteStorage" />
+          <EntitySet Name="Tbl_SiteStorageBatch" EntityType="LingYunModel.Tbl_SiteStorageBatch" />
+          <EntitySet Name="Tbl_User" EntityType="LingYunModel.Tbl_User" />
+        </EntityContainer>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Tbl_BarCodeBatch">
+          <Key>
+            <PropertyRef Name="BarCodeBatchID" />
+          </Key>
+          <Property Name="BarCodeBatchID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BuildBatchID" Type="Int64" Nullable="false" />
+          <Property Name="BarCodeNo" Type="String" Nullable="false" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+          <Property Name="BarCodeType" Type="Int16" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tbl_BarCodeInfo">
+          <Key>
+            <PropertyRef Name="BarCodeInfoID" />
+          </Key>
+          <Property Name="BarCodeInfoID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BarCodeBatchID" Type="Int64" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+          <Property Name="ProjectName" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="BuildName" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="MateriesType" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="WorkMapID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Tbl_CenterStorage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectID" Type="Int64" Nullable="false" />
+          <Property Name="ProjectName" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="MateriesID" Type="Int64" Nullable="false" />
+          <Property Name="InBuildBatchID" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="OutBuildBatchID" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="BuildNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="MateriesTypeNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="ProcessingNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="InCount" Type="Int64" />
+          <Property Name="OutCount" Type="Int64" />
+          <Property Name="BuildName" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="PreAdmStatus" Type="Int32" />
+          <Property Name="PreAdmTime" Type="DateTime" />
+          <Property Name="NowAdmStatus" Type="Int32" />
+          <Property Name="NowAdmTime" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Tbl_CenterStorageBatch">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectID" Type="Int64" Nullable="false" />
+          <Property Name="ProjectName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="MateriesID" Type="Int64" Nullable="false" />
+          <Property Name="BuildBatchID" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="BuildNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="MateriesTypeNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="Count" Type="Int64" />
+          <Property Name="ProcessingNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="BuildName" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="Date" Type="DateTime" />
+          <Property Name="PreAdmStatus" Type="Int64" />
+          <Property Name="PreAdmTime" Type="DateTime" />
+          <Property Name="NowAdmStatus" Type="Int64" />
+          <Property Name="NowAdmTime" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Tbl_InMaries">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="TableName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Num" Type="Int32" />
+          <Property Name="MapId" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="BuildId" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Count" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Tbl_Materies">
+          <Key>
+            <PropertyRef Name="MateriesID" />
+          </Key>
+          <Property Name="ProjectID" Type="Int64" Nullable="false" />
+          <Property Name="MateriesID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" />
+          <Property Name="BuildNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="ProcessingNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="Count" Type="Int64" />
+          <Property Name="MateriesTypeNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="BuildName" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="ProjectName" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="PreAdmStatus" Type="Int64" />
+          <Property Name="NowAdmStatus" Type="Int64" />
+          <Property Name="PreDate" Type="DateTime" />
+          <Property Name="NowDate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Tbl_OutCenterStorage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectID" Type="Int64" Nullable="false" />
+          <Property Name="ProjectName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="MateriesID" Type="Int64" Nullable="false" />
+          <Property Name="BuildBatchID" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="BuildNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="MateriesTypeNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="Count" Type="Int64" />
+          <Property Name="ProcessingNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="BuildName" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="Date" Type="DateTime" />
+          <Property Name="PreAdmStatus" Type="Int64" />
+          <Property Name="PreAdmTime" Type="DateTime" />
+          <Property Name="NowAdmStatus" Type="Int64" />
+          <Property Name="NowAdmTime" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Tbl_OutProductBatch">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectID" Type="Int64" Nullable="false" />
+          <Property Name="ProjectName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="MateriesID" Type="Int64" Nullable="false" />
+          <Property Name="BuildBatchID" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="BuildNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="MateriesTypeNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="Count" Type="Int64" />
+          <Property Name="ProcessingNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="BuildName" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="Date" Type="DateTime" />
+          <Property Name="PreAdmStatus" Type="Int64" />
+          <Property Name="PreAdmTime" Type="DateTime" />
+          <Property Name="NowAdmStatus" Type="Int64" />
+          <Property Name="NowAdmTime" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Tbl_OutSiteStorage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectID" Type="Int64" Nullable="false" />
+          <Property Name="ProjectName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="MateriesID" Type="Int64" Nullable="false" />
+          <Property Name="BuildBatchID" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="BuildNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="MateriesTypeNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="Count" Type="Int64" />
+          <Property Name="ProcessingNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="BuildName" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="Date" Type="DateTime" />
+          <Property Name="PreAdmStatus" Type="Int64" />
+          <Property Name="PreAdmTime" Type="DateTime" />
+          <Property Name="NowAdmStatus" Type="Int64" />
+          <Property Name="NowAdmTime" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Tbl_ProductBatch">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectID" Type="Int64" Nullable="false" />
+          <Property Name="ProjectName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="MateriesID" Type="Int64" Nullable="false" />
+          <Property Name="BuildBatchID" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="BuildNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="MateriesTypeNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="Count" Type="Int64" />
+          <Property Name="ProcessingNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="BuildName" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="Date" Type="DateTime" />
+          <Property Name="PreAdmStatus" Type="Int64" />
+          <Property Name="PreAdmTime" Type="DateTime" />
+          <Property Name="NowAdmStatus" Type="Int64" />
+          <Property Name="NowAdmTime" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Tbl_ProductStorage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectID" Type="Int64" Nullable="false" />
+          <Property Name="ProjectName" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="MateriesID" Type="Int64" Nullable="false" />
+          <Property Name="InBuildBatchID" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="OutBuildBatchID" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="BuildNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="MateriesTypeNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="ProcessingNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="InCount" Type="Int64" />
+          <Property Name="OutCount" Type="Int64" />
+          <Property Name="BuildName" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="PreAdmStatus" Type="Int32" />
+          <Property Name="PreAdmTime" Type="DateTime" />
+          <Property Name="NowAdmStatus" Type="Int32" />
+          <Property Name="NowAdmTime" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Tbl_Project">
+          <Key>
+            <PropertyRef Name="ProjectID" />
+          </Key>
+          <Property Name="ProjectID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectDate" Type="DateTime" />
+          <Property Name="ProjectAdm" Type="Int64" />
+          <Property Name="ProjectAdmStatus" Type="Int32" />
+          <Property Name="DesignAdm" Type="Int64" />
+          <Property Name="DesignAdmStatus" Type="Int32" />
+          <Property Name="ProductAdm" Type="Int64" />
+          <Property Name="ProductAdmStatus" Type="Int32" />
+          <Property Name="CenterStorageAdm" Type="Int64" />
+          <Property Name="CenterStorageAdmStatus" Type="Int32" />
+          <Property Name="SiteStorageAdm" Type="Int64" />
+          <Property Name="SiteStorageAdmStatus" Type="Int32" />
+          <Property Name="SiteGetAdm" Type="Int64" />
+          <Property Name="SiteGetAdmStatus" Type="Int32" />
+          <Property Name="ProjectName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Tbl_SiteStorage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectID" Type="Int64" Nullable="false" />
+          <Property Name="ProjectName" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="MateriesID" Type="Int64" Nullable="false" />
+          <Property Name="InBuildBatchID" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="OutBuildBatchID" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="BuildNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="MateriesTypeNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="ProcessingNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="InCount" Type="Int64" />
+          <Property Name="OutCount" Type="Int64" />
+          <Property Name="BuildName" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="PreAdmStatus" Type="Int32" />
+          <Property Name="PreAdmTime" Type="DateTime" />
+          <Property Name="NowAdmStatus" Type="Int32" />
+          <Property Name="NowAdmTime" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Tbl_SiteStorageBatch">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectID" Type="Int64" Nullable="false" />
+          <Property Name="ProjectName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="MateriesID" Type="Int64" Nullable="false" />
+          <Property Name="BuildBatchID" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="BuildNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="MateriesTypeNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="Count" Type="Int64" />
+          <Property Name="ProcessingNum" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="BuildName" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="Date" Type="DateTime" />
+          <Property Name="PreAdmStatus" Type="Int64" />
+          <Property Name="PreAdmTime" Type="DateTime" />
+          <Property Name="NowAdmStatus" Type="Int64" />
+          <Property Name="NowAdmTime" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Tbl_User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="CheckPwd" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="APP" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="Access" Type="Int32" Nullable="false" />
+          <Property Name="LoginPwd1" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="LoginPwd2" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="LoginPwd3" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="LoginPwd4" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="LoginPwd5" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="LoginPwd6" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="LoginPwd7" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="LoginPwd8" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="LoginPwd9" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="LoginPwd10" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LingYunModelStoreContainer" CdmEntityContainer="LingYunEntities">
+          <EntitySetMapping Name="sysdiagrams"><EntityTypeMapping TypeName="LingYunModel.sysdiagrams"><MappingFragment StoreEntitySet="sysdiagrams">
+            <ScalarProperty Name="name" ColumnName="name" />
+            <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+            <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+            <ScalarProperty Name="version" ColumnName="version" />
+            <ScalarProperty Name="definition" ColumnName="definition" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Tbl_BarCodeBatch"><EntityTypeMapping TypeName="LingYunModel.Tbl_BarCodeBatch"><MappingFragment StoreEntitySet="Tbl_BarCodeBatch">
+            <ScalarProperty Name="BarCodeBatchID" ColumnName="BarCodeBatchID" />
+            <ScalarProperty Name="BuildBatchID" ColumnName="BuildBatchID" />
+            <ScalarProperty Name="BarCodeNo" ColumnName="BarCodeNo" />
+            <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+            <ScalarProperty Name="BarCodeType" ColumnName="BarCodeType" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Tbl_BarCodeInfo"><EntityTypeMapping TypeName="LingYunModel.Tbl_BarCodeInfo"><MappingFragment StoreEntitySet="Tbl_BarCodeInfo">
+            <ScalarProperty Name="BarCodeInfoID" ColumnName="BarCodeInfoID" />
+            <ScalarProperty Name="BarCodeBatchID" ColumnName="BarCodeBatchID" />
+            <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+            <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+            <ScalarProperty Name="BuildName" ColumnName="BuildName" />
+            <ScalarProperty Name="MateriesType" ColumnName="MateriesType" />
+            <ScalarProperty Name="WorkMapID" ColumnName="WorkMapID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Tbl_CenterStorage"><EntityTypeMapping TypeName="LingYunModel.Tbl_CenterStorage"><MappingFragment StoreEntitySet="Tbl_CenterStorage">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+            <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+            <ScalarProperty Name="MateriesID" ColumnName="MateriesID" />
+            <ScalarProperty Name="InBuildBatchID" ColumnName="InBuildBatchID" />
+            <ScalarProperty Name="OutBuildBatchID" ColumnName="OutBuildBatchID" />
+            <ScalarProperty Name="BuildNum" ColumnName="BuildNum" />
+            <ScalarProperty Name="MateriesTypeNum" ColumnName="MateriesTypeNum" />
+            <ScalarProperty Name="ProcessingNum" ColumnName="ProcessingNum" />
+            <ScalarProperty Name="InCount" ColumnName="InCount" />
+            <ScalarProperty Name="OutCount" ColumnName="OutCount" />
+            <ScalarProperty Name="BuildName" ColumnName="BuildName" />
+            <ScalarProperty Name="PreAdmStatus" ColumnName="PreAdmStatus" />
+            <ScalarProperty Name="PreAdmTime" ColumnName="PreAdmTime" />
+            <ScalarProperty Name="NowAdmStatus" ColumnName="NowAdmStatus" />
+            <ScalarProperty Name="NowAdmTime" ColumnName="NowAdmTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Tbl_CenterStorageBatch"><EntityTypeMapping TypeName="LingYunModel.Tbl_CenterStorageBatch"><MappingFragment StoreEntitySet="Tbl_CenterStorageBatch">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+            <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+            <ScalarProperty Name="MateriesID" ColumnName="MateriesID" />
+            <ScalarProperty Name="BuildBatchID" ColumnName="BuildBatchID" />
+            <ScalarProperty Name="BuildNum" ColumnName="BuildNum" />
+            <ScalarProperty Name="MateriesTypeNum" ColumnName="MateriesTypeNum" />
+            <ScalarProperty Name="Count" ColumnName="Count" />
+            <ScalarProperty Name="ProcessingNum" ColumnName="ProcessingNum" />
+            <ScalarProperty Name="BuildName" ColumnName="BuildName" />
+            <ScalarProperty Name="Date" ColumnName="Date" />
+            <ScalarProperty Name="PreAdmStatus" ColumnName="PreAdmStatus" />
+            <ScalarProperty Name="PreAdmTime" ColumnName="PreAdmTime" />
+            <ScalarProperty Name="NowAdmStatus" ColumnName="NowAdmStatus" />
+            <ScalarProperty Name="NowAdmTime" ColumnName="NowAdmTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Tbl_InMaries"><EntityTypeMapping TypeName="LingYunModel.Tbl_InMaries"><MappingFragment StoreEntitySet="Tbl_InMaries">
+            <ScalarProperty Name="TableName" ColumnName="TableName" />
+            <ScalarProperty Name="Num" ColumnName="Num" />
+            <ScalarProperty Name="MapId" ColumnName="MapId" />
+            <ScalarProperty Name="BuildId" ColumnName="BuildId" />
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Count" ColumnName="Count" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Materies"><EntityTypeMapping TypeName="LingYunModel.Tbl_Materies"><MappingFragment StoreEntitySet="Tbl_Materies">
+            <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+            <ScalarProperty Name="MateriesID" ColumnName="MateriesID" />
+            <ScalarProperty Name="Date" ColumnName="Date" />
+            <ScalarProperty Name="BuildNum" ColumnName="BuildNum" />
+            <ScalarProperty Name="ProcessingNum" ColumnName="ProcessingNum" />
+            <ScalarProperty Name="Count" ColumnName="Count" />
+            <ScalarProperty Name="MateriesTypeNum" ColumnName="MateriesTypeNum" />
+            <ScalarProperty Name="BuildName" ColumnName="BuildName" />
+            <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+            <ScalarProperty Name="PreAdmStatus" ColumnName="PreAdmStatus" />
+            <ScalarProperty Name="NowAdmStatus" ColumnName="NowAdmStatus" />
+            <ScalarProperty Name="PreDate" ColumnName="PreDate" />
+            <ScalarProperty Name="NowDate" ColumnName="NowDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Tbl_OutCenterStorage"><EntityTypeMapping TypeName="LingYunModel.Tbl_OutCenterStorage"><MappingFragment StoreEntitySet="Tbl_OutCenterStorage">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+            <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+            <ScalarProperty Name="MateriesID" ColumnName="MateriesID" />
+            <ScalarProperty Name="BuildBatchID" ColumnName="BuildBatchID" />
+            <ScalarProperty Name="BuildNum" ColumnName="BuildNum" />
+            <ScalarProperty Name="MateriesTypeNum" ColumnName="MateriesTypeNum" />
+            <ScalarProperty Name="Count" ColumnName="Count" />
+            <ScalarProperty Name="ProcessingNum" ColumnName="ProcessingNum" />
+            <ScalarProperty Name="BuildName" ColumnName="BuildName" />
+            <ScalarProperty Name="Date" ColumnName="Date" />
+            <ScalarProperty Name="PreAdmStatus" ColumnName="PreAdmStatus" />
+            <ScalarProperty Name="PreAdmTime" ColumnName="PreAdmTime" />
+            <ScalarProperty Name="NowAdmStatus" ColumnName="NowAdmStatus" />
+            <ScalarProperty Name="NowAdmTime" ColumnName="NowAdmTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Tbl_OutProductBatch"><EntityTypeMapping TypeName="LingYunModel.Tbl_OutProductBatch"><MappingFragment StoreEntitySet="Tbl_OutProductBatch">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+            <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+            <ScalarProperty Name="MateriesID" ColumnName="MateriesID" />
+            <ScalarProperty Name="BuildBatchID" ColumnName="BuildBatchID" />
+            <ScalarProperty Name="BuildNum" ColumnName="BuildNum" />
+            <ScalarProperty Name="MateriesTypeNum" ColumnName="MateriesTypeNum" />
+            <ScalarProperty Name="Count" ColumnName="Count" />
+            <ScalarProperty Name="ProcessingNum" ColumnName="ProcessingNum" />
+            <ScalarProperty Name="BuildName" ColumnName="BuildName" />
+            <ScalarProperty Name="Date" ColumnName="Date" />
+            <ScalarProperty Name="PreAdmStatus" ColumnName="PreAdmStatus" />
+            <ScalarProperty Name="PreAdmTime" ColumnName="PreAdmTime" />
+            <ScalarProperty Name="NowAdmStatus" ColumnName="NowAdmStatus" />
+            <ScalarProperty Name="NowAdmTime" ColumnName="NowAdmTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Tbl_OutSiteStorage"><EntityTypeMapping TypeName="LingYunModel.Tbl_OutSiteStorage"><MappingFragment StoreEntitySet="Tbl_OutSiteStorage">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+            <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+            <ScalarProperty Name="MateriesID" ColumnName="MateriesID" />
+            <ScalarProperty Name="BuildBatchID" ColumnName="BuildBatchID" />
+            <ScalarProperty Name="BuildNum" ColumnName="BuildNum" />
+            <ScalarProperty Name="MateriesTypeNum" ColumnName="MateriesTypeNum" />
+            <ScalarProperty Name="Count" ColumnName="Count" />
+            <ScalarProperty Name="ProcessingNum" ColumnName="ProcessingNum" />
+            <ScalarProperty Name="BuildName" ColumnName="BuildName" />
+            <ScalarProperty Name="Date" ColumnName="Date" />
+            <ScalarProperty Name="PreAdmStatus" ColumnName="PreAdmStatus" />
+            <ScalarProperty Name="PreAdmTime" ColumnName="PreAdmTime" />
+            <ScalarProperty Name="NowAdmStatus" ColumnName="NowAdmStatus" />
+            <ScalarProperty Name="NowAdmTime" ColumnName="NowAdmTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Tbl_ProductBatch"><EntityTypeMapping TypeName="LingYunModel.Tbl_ProductBatch"><MappingFragment StoreEntitySet="Tbl_ProductBatch">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+            <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+            <ScalarProperty Name="MateriesID" ColumnName="MateriesID" />
+            <ScalarProperty Name="BuildBatchID" ColumnName="BuildBatchID" />
+            <ScalarProperty Name="BuildNum" ColumnName="BuildNum" />
+            <ScalarProperty Name="MateriesTypeNum" ColumnName="MateriesTypeNum" />
+            <ScalarProperty Name="Count" ColumnName="Count" />
+            <ScalarProperty Name="ProcessingNum" ColumnName="ProcessingNum" />
+            <ScalarProperty Name="BuildName" ColumnName="BuildName" />
+            <ScalarProperty Name="Date" ColumnName="Date" />
+            <ScalarProperty Name="PreAdmStatus" ColumnName="PreAdmStatus" />
+            <ScalarProperty Name="PreAdmTime" ColumnName="PreAdmTime" />
+            <ScalarProperty Name="NowAdmStatus" ColumnName="NowAdmStatus" />
+            <ScalarProperty Name="NowAdmTime" ColumnName="NowAdmTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Tbl_ProductStorage"><EntityTypeMapping TypeName="LingYunModel.Tbl_ProductStorage"><MappingFragment StoreEntitySet="Tbl_ProductStorage">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+            <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+            <ScalarProperty Name="MateriesID" ColumnName="MateriesID" />
+            <ScalarProperty Name="InBuildBatchID" ColumnName="InBuildBatchID" />
+            <ScalarProperty Name="OutBuildBatchID" ColumnName="OutBuildBatchID" />
+            <ScalarProperty Name="BuildNum" ColumnName="BuildNum" />
+            <ScalarProperty Name="MateriesTypeNum" ColumnName="MateriesTypeNum" />
+            <ScalarProperty Name="ProcessingNum" ColumnName="ProcessingNum" />
+            <ScalarProperty Name="InCount" ColumnName="InCount" />
+            <ScalarProperty Name="OutCount" ColumnName="OutCount" />
+            <ScalarProperty Name="BuildName" ColumnName="BuildName" />
+            <ScalarProperty Name="PreAdmStatus" ColumnName="PreAdmStatus" />
+            <ScalarProperty Name="PreAdmTime" ColumnName="PreAdmTime" />
+            <ScalarProperty Name="NowAdmStatus" ColumnName="NowAdmStatus" />
+            <ScalarProperty Name="NowAdmTime" ColumnName="NowAdmTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Project"><EntityTypeMapping TypeName="LingYunModel.Tbl_Project"><MappingFragment StoreEntitySet="Tbl_Project">
+            <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+            <ScalarProperty Name="ProjectDate" ColumnName="ProjectDate" />
+            <ScalarProperty Name="ProjectAdm" ColumnName="ProjectAdm" />
+            <ScalarProperty Name="ProjectAdmStatus" ColumnName="ProjectAdmStatus" />
+            <ScalarProperty Name="DesignAdm" ColumnName="DesignAdm" />
+            <ScalarProperty Name="DesignAdmStatus" ColumnName="DesignAdmStatus" />
+            <ScalarProperty Name="ProductAdm" ColumnName="ProductAdm" />
+            <ScalarProperty Name="ProductAdmStatus" ColumnName="ProductAdmStatus" />
+            <ScalarProperty Name="CenterStorageAdm" ColumnName="CenterStorageAdm" />
+            <ScalarProperty Name="CenterStorageAdmStatus" ColumnName="CenterStorageAdmStatus" />
+            <ScalarProperty Name="SiteStorageAdm" ColumnName="SiteStorageAdm" />
+            <ScalarProperty Name="SiteStorageAdmStatus" ColumnName="SiteStorageAdmStatus" />
+            <ScalarProperty Name="SiteGetAdm" ColumnName="SiteGetAdm" />
+            <ScalarProperty Name="SiteGetAdmStatus" ColumnName="SiteGetAdmStatus" />
+            <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Tbl_SiteStorage"><EntityTypeMapping TypeName="LingYunModel.Tbl_SiteStorage"><MappingFragment StoreEntitySet="Tbl_SiteStorage">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+            <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+            <ScalarProperty Name="MateriesID" ColumnName="MateriesID" />
+            <ScalarProperty Name="InBuildBatchID" ColumnName="InBuildBatchID" />
+            <ScalarProperty Name="OutBuildBatchID" ColumnName="OutBuildBatchID" />
+            <ScalarProperty Name="BuildNum" ColumnName="BuildNum" />
+            <ScalarProperty Name="MateriesTypeNum" ColumnName="MateriesTypeNum" />
+            <ScalarProperty Name="ProcessingNum" ColumnName="ProcessingNum" />
+            <ScalarProperty Name="InCount" ColumnName="InCount" />
+            <ScalarProperty Name="OutCount" ColumnName="OutCount" />
+            <ScalarProperty Name="BuildName" ColumnName="BuildName" />
+            <ScalarProperty Name="PreAdmStatus" ColumnName="PreAdmStatus" />
+            <ScalarProperty Name="PreAdmTime" ColumnName="PreAdmTime" />
+            <ScalarProperty Name="NowAdmStatus" ColumnName="NowAdmStatus" />
+            <ScalarProperty Name="NowAdmTime" ColumnName="NowAdmTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Tbl_SiteStorageBatch"><EntityTypeMapping TypeName="LingYunModel.Tbl_SiteStorageBatch"><MappingFragment StoreEntitySet="Tbl_SiteStorageBatch">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+            <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+            <ScalarProperty Name="MateriesID" ColumnName="MateriesID" />
+            <ScalarProperty Name="BuildBatchID" ColumnName="BuildBatchID" />
+            <ScalarProperty Name="BuildNum" ColumnName="BuildNum" />
+            <ScalarProperty Name="MateriesTypeNum" ColumnName="MateriesTypeNum" />
+            <ScalarProperty Name="Count" ColumnName="Count" />
+            <ScalarProperty Name="ProcessingNum" ColumnName="ProcessingNum" />
+            <ScalarProperty Name="BuildName" ColumnName="BuildName" />
+            <ScalarProperty Name="Date" ColumnName="Date" />
+            <ScalarProperty Name="PreAdmStatus" ColumnName="PreAdmStatus" />
+            <ScalarProperty Name="PreAdmTime" ColumnName="PreAdmTime" />
+            <ScalarProperty Name="NowAdmStatus" ColumnName="NowAdmStatus" />
+            <ScalarProperty Name="NowAdmTime" ColumnName="NowAdmTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Tbl_User"><EntityTypeMapping TypeName="LingYunModel.Tbl_User"><MappingFragment StoreEntitySet="Tbl_User">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="CheckPwd" ColumnName="CheckPwd" />
+            <ScalarProperty Name="APP" ColumnName="APP" />
+            <ScalarProperty Name="Access" ColumnName="Access" />
+            <ScalarProperty Name="LoginPwd1" ColumnName="LoginPwd1" />
+            <ScalarProperty Name="LoginPwd2" ColumnName="LoginPwd2" />
+            <ScalarProperty Name="LoginPwd3" ColumnName="LoginPwd3" />
+            <ScalarProperty Name="LoginPwd4" ColumnName="LoginPwd4" />
+            <ScalarProperty Name="LoginPwd5" ColumnName="LoginPwd5" />
+            <ScalarProperty Name="LoginPwd6" ColumnName="LoginPwd6" />
+            <ScalarProperty Name="LoginPwd7" ColumnName="LoginPwd7" />
+            <ScalarProperty Name="LoginPwd8" ColumnName="LoginPwd8" />
+            <ScalarProperty Name="LoginPwd9" ColumnName="LoginPwd9" />
+            <ScalarProperty Name="LoginPwd10" ColumnName="LoginPwd10" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="LingYun">
+        <EntityTypeShape EntityType="LingYunModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" Height="1.9700325520833331" IsExpanded="true" />
+        <EntityTypeShape EntityType="LingYunModel.Tbl_BarCodeBatch" Width="1.5" PointX="2.75" PointY="0.75" Height="1.9700325520833335" IsExpanded="true" />
+        <EntityTypeShape EntityType="LingYunModel.Tbl_BarCodeInfo" Width="1.5" PointX="0.75" PointY="3.75" Height="2.3520719401041656" IsExpanded="true" />
+        <EntityTypeShape EntityType="LingYunModel.Tbl_CenterStorage" Width="1.5" PointX="2.75" PointY="3.75" Height="4.0712491861979156" IsExpanded="true" />
+        <EntityTypeShape EntityType="LingYunModel.Tbl_CenterStorageBatch" Width="1.5" PointX="4.75" PointY="0.75" Height="3.8802294921874996" IsExpanded="true" />
+        <EntityTypeShape EntityType="LingYunModel.Tbl_InMaries" Width="1.5" PointX="4.75" PointY="5.75" Height="2.1610522460937496" IsExpanded="true" />
+        <EntityTypeShape EntityType="LingYunModel.Tbl_Materies" Width="1.5" PointX="6.75" PointY="0.75" Height="3.4981901041666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="LingYunModel.Tbl_OutCenterStorage" Width="1.5" PointX="6.75" PointY="5.75" Height="3.8802294921874996" IsExpanded="true" />
+        <EntityTypeShape EntityType="LingYunModel.Tbl_OutProductBatch" Width="1.5" PointX="8.75" PointY="0.75" Height="3.8802294921874996" IsExpanded="true" />
+        <EntityTypeShape EntityType="LingYunModel.Tbl_OutSiteStorage" Width="1.5" PointX="0.75" PointY="8.75" Height="3.8802294921875031" IsExpanded="true" />
+        <EntityTypeShape EntityType="LingYunModel.Tbl_ProductBatch" Width="1.5" PointX="2.75" PointY="8.75" Height="3.8802294921875031" IsExpanded="true" />
+        <EntityTypeShape EntityType="LingYunModel.Tbl_ProductStorage" Width="1.5" PointX="8.75" PointY="5.75" Height="4.0712491861979174" IsExpanded="true" />
+        <EntityTypeShape EntityType="LingYunModel.Tbl_Project" Width="1.5" PointX="10.75" PointY="0.75" Height="3.8802294921875031" IsExpanded="true" />
+        <EntityTypeShape EntityType="LingYunModel.Tbl_SiteStorage" Width="1.5" PointX="4.75" PointY="10.75" Height="4.0712491861979174" IsExpanded="true" />
+        <EntityTypeShape EntityType="LingYunModel.Tbl_SiteStorageBatch" Width="1.5" PointX="10.75" PointY="5.75" Height="3.8802294921875031" IsExpanded="true" />
+        <EntityTypeShape EntityType="LingYunModel.Tbl_User" Width="1.5" PointX="6.75" PointY="10.75" Height="3.8802294921875031" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LingYunModelStoreContainer" CdmEntityContainer="LingYunEntities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="LingYunModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_BarCodeBatch">
+      <EntityTypeMapping TypeName="LingYunModel.Tbl_BarCodeBatch">
+        <MappingFragment StoreEntitySet="Tbl_BarCodeBatch">
+          <ScalarProperty Name="BarCodeBatchID" ColumnName="BarCodeBatchID" />
+          <ScalarProperty Name="BuildBatchID" ColumnName="BuildBatchID" />
+          <ScalarProperty Name="BarCodeNo" ColumnName="BarCodeNo" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="BarCodeType" ColumnName="BarCodeType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_BarCodeInfo">
+      <EntityTypeMapping TypeName="LingYunModel.Tbl_BarCodeInfo">
+        <MappingFragment StoreEntitySet="Tbl_BarCodeInfo">
+          <ScalarProperty Name="BarCodeInfoID" ColumnName="BarCodeInfoID" />
+          <ScalarProperty Name="BarCodeBatchID" ColumnName="BarCodeBatchID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="BuildName" ColumnName="BuildName" />
+          <ScalarProperty Name="MateriesType" ColumnName="MateriesType" />
+          <ScalarProperty Name="WorkMapID" ColumnName="WorkMapID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_CenterStorage">
+      <EntityTypeMapping TypeName="LingYunModel.Tbl_CenterStorage">
+        <MappingFragment StoreEntitySet="Tbl_CenterStorage">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="MateriesID" ColumnName="MateriesID" />
+          <ScalarProperty Name="InBuildBatchID" ColumnName="InBuildBatchID" />
+          <ScalarProperty Name="OutBuildBatchID" ColumnName="OutBuildBatchID" />
+          <ScalarProperty Name="BuildNum" ColumnName="BuildNum" />
+          <ScalarProperty Name="MateriesTypeNum" ColumnName="MateriesTypeNum" />
+          <ScalarProperty Name="ProcessingNum" ColumnName="ProcessingNum" />
+          <ScalarProperty Name="InCount" ColumnName="InCount" />
+          <ScalarProperty Name="OutCount" ColumnName="OutCount" />
+          <ScalarProperty Name="BuildName" ColumnName="BuildName" />
+          <ScalarProperty Name="PreAdmStatus" ColumnName="PreAdmStatus" />
+          <ScalarProperty Name="PreAdmTime" ColumnName="PreAdmTime" />
+          <ScalarProperty Name="NowAdmStatus" ColumnName="NowAdmStatus" />
+          <ScalarProperty Name="NowAdmTime" ColumnName="NowAdmTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_CenterStorageBatch">
+      <EntityTypeMapping TypeName="LingYunModel.Tbl_CenterStorageBatch">
+        <MappingFragment StoreEntitySet="Tbl_CenterStorageBatch">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="MateriesID" ColumnName="MateriesID" />
+          <ScalarProperty Name="BuildBatchID" ColumnName="BuildBatchID" />
+          <ScalarProperty Name="BuildNum" ColumnName="BuildNum" />
+          <ScalarProperty Name="MateriesTypeNum" ColumnName="MateriesTypeNum" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="ProcessingNum" ColumnName="ProcessingNum" />
+          <ScalarProperty Name="BuildName" ColumnName="BuildName" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="PreAdmStatus" ColumnName="PreAdmStatus" />
+          <ScalarProperty Name="PreAdmTime" ColumnName="PreAdmTime" />
+          <ScalarProperty Name="NowAdmStatus" ColumnName="NowAdmStatus" />
+          <ScalarProperty Name="NowAdmTime" ColumnName="NowAdmTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_InMaries">
+      <EntityTypeMapping TypeName="LingYunModel.Tbl_InMaries">
+        <MappingFragment StoreEntitySet="Tbl_InMaries">
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="MapId" ColumnName="MapId" />
+          <ScalarProperty Name="BuildId" ColumnName="BuildId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Materies">
+      <EntityTypeMapping TypeName="LingYunModel.Tbl_Materies">
+        <MappingFragment StoreEntitySet="Tbl_Materies">
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="MateriesID" ColumnName="MateriesID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="BuildNum" ColumnName="BuildNum" />
+          <ScalarProperty Name="ProcessingNum" ColumnName="ProcessingNum" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="MateriesTypeNum" ColumnName="MateriesTypeNum" />
+          <ScalarProperty Name="BuildName" ColumnName="BuildName" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="PreAdmStatus" ColumnName="PreAdmStatus" />
+          <ScalarProperty Name="NowAdmStatus" ColumnName="NowAdmStatus" />
+          <ScalarProperty Name="PreDate" ColumnName="PreDate" />
+          <ScalarProperty Name="NowDate" ColumnName="NowDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_OutCenterStorage">
+      <EntityTypeMapping TypeName="LingYunModel.Tbl_OutCenterStorage">
+        <MappingFragment StoreEntitySet="Tbl_OutCenterStorage">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="MateriesID" ColumnName="MateriesID" />
+          <ScalarProperty Name="BuildBatchID" ColumnName="BuildBatchID" />
+          <ScalarProperty Name="BuildNum" ColumnName="BuildNum" />
+          <ScalarProperty Name="MateriesTypeNum" ColumnName="MateriesTypeNum" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="ProcessingNum" ColumnName="ProcessingNum" />
+          <ScalarProperty Name="BuildName" ColumnName="BuildName" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="PreAdmStatus" ColumnName="PreAdmStatus" />
+          <ScalarProperty Name="PreAdmTime" ColumnName="PreAdmTime" />
+          <ScalarProperty Name="NowAdmStatus" ColumnName="NowAdmStatus" />
+          <ScalarProperty Name="NowAdmTime" ColumnName="NowAdmTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_OutProductBatch">
+      <EntityTypeMapping TypeName="LingYunModel.Tbl_OutProductBatch">
+        <MappingFragment StoreEntitySet="Tbl_OutProductBatch">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="MateriesID" ColumnName="MateriesID" />
+          <ScalarProperty Name="BuildBatchID" ColumnName="BuildBatchID" />
+          <ScalarProperty Name="BuildNum" ColumnName="BuildNum" />
+          <ScalarProperty Name="MateriesTypeNum" ColumnName="MateriesTypeNum" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="ProcessingNum" ColumnName="ProcessingNum" />
+          <ScalarProperty Name="BuildName" ColumnName="BuildName" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="PreAdmStatus" ColumnName="PreAdmStatus" />
+          <ScalarProperty Name="PreAdmTime" ColumnName="PreAdmTime" />
+          <ScalarProperty Name="NowAdmStatus" ColumnName="NowAdmStatus" />
+          <ScalarProperty Name="NowAdmTime" ColumnName="NowAdmTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_OutSiteStorage">
+      <EntityTypeMapping TypeName="LingYunModel.Tbl_OutSiteStorage">
+        <MappingFragment StoreEntitySet="Tbl_OutSiteStorage">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="MateriesID" ColumnName="MateriesID" />
+          <ScalarProperty Name="BuildBatchID" ColumnName="BuildBatchID" />
+          <ScalarProperty Name="BuildNum" ColumnName="BuildNum" />
+          <ScalarProperty Name="MateriesTypeNum" ColumnName="MateriesTypeNum" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="ProcessingNum" ColumnName="ProcessingNum" />
+          <ScalarProperty Name="BuildName" ColumnName="BuildName" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="PreAdmStatus" ColumnName="PreAdmStatus" />
+          <ScalarProperty Name="PreAdmTime" ColumnName="PreAdmTime" />
+          <ScalarProperty Name="NowAdmStatus" ColumnName="NowAdmStatus" />
+          <ScalarProperty Name="NowAdmTime" ColumnName="NowAdmTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_ProductBatch">
+      <EntityTypeMapping TypeName="LingYunModel.Tbl_ProductBatch">
+        <MappingFragment StoreEntitySet="Tbl_ProductBatch">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="MateriesID" ColumnName="MateriesID" />
+          <ScalarProperty Name="BuildBatchID" ColumnName="BuildBatchID" />
+          <ScalarProperty Name="BuildNum" ColumnName="BuildNum" />
+          <ScalarProperty Name="MateriesTypeNum" ColumnName="MateriesTypeNum" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="ProcessingNum" ColumnName="ProcessingNum" />
+          <ScalarProperty Name="BuildName" ColumnName="BuildName" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="PreAdmStatus" ColumnName="PreAdmStatus" />
+          <ScalarProperty Name="PreAdmTime" ColumnName="PreAdmTime" />
+          <ScalarProperty Name="NowAdmStatus" ColumnName="NowAdmStatus" />
+          <ScalarProperty Name="NowAdmTime" ColumnName="NowAdmTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_ProductStorage">
+      <EntityTypeMapping TypeName="LingYunModel.Tbl_ProductStorage">
+        <MappingFragment StoreEntitySet="Tbl_ProductStorage">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="MateriesID" ColumnName="MateriesID" />
+          <ScalarProperty Name="InBuildBatchID" ColumnName="InBuildBatchID" />
+          <ScalarProperty Name="OutBuildBatchID" ColumnName="OutBuildBatchID" />
+          <ScalarProperty Name="BuildNum" ColumnName="BuildNum" />
+          <ScalarProperty Name="MateriesTypeNum" ColumnName="MateriesTypeNum" />
+          <ScalarProperty Name="ProcessingNum" ColumnName="ProcessingNum" />
+          <ScalarProperty Name="InCount" ColumnName="InCount" />
+          <ScalarProperty Name="OutCount" ColumnName="OutCount" />
+          <ScalarProperty Name="BuildName" ColumnName="BuildName" />
+          <ScalarProperty Name="PreAdmStatus" ColumnName="PreAdmStatus" />
+          <ScalarProperty Name="PreAdmTime" ColumnName="PreAdmTime" />
+          <ScalarProperty Name="NowAdmStatus" ColumnName="NowAdmStatus" />
+          <ScalarProperty Name="NowAdmTime" ColumnName="NowAdmTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Project">
+      <EntityTypeMapping TypeName="LingYunModel.Tbl_Project">
+        <MappingFragment StoreEntitySet="Tbl_Project">
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="ProjectDate" ColumnName="ProjectDate" />
+          <ScalarProperty Name="ProjectAdm" ColumnName="ProjectAdm" />
+          <ScalarProperty Name="ProjectAdmStatus" ColumnName="ProjectAdmStatus" />
+          <ScalarProperty Name="DesignAdm" ColumnName="DesignAdm" />
+          <ScalarProperty Name="DesignAdmStatus" ColumnName="DesignAdmStatus" />
+          <ScalarProperty Name="ProductAdm" ColumnName="ProductAdm" />
+          <ScalarProperty Name="ProductAdmStatus" ColumnName="ProductAdmStatus" />
+          <ScalarProperty Name="CenterStorageAdm" ColumnName="CenterStorageAdm" />
+          <ScalarProperty Name="CenterStorageAdmStatus" ColumnName="CenterStorageAdmStatus" />
+          <ScalarProperty Name="SiteStorageAdm" ColumnName="SiteStorageAdm" />
+          <ScalarProperty Name="SiteStorageAdmStatus" ColumnName="SiteStorageAdmStatus" />
+          <ScalarProperty Name="SiteGetAdm" ColumnName="SiteGetAdm" />
+          <ScalarProperty Name="SiteGetAdmStatus" ColumnName="SiteGetAdmStatus" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_SiteStorage">
+      <EntityTypeMapping TypeName="LingYunModel.Tbl_SiteStorage">
+        <MappingFragment StoreEntitySet="Tbl_SiteStorage">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="MateriesID" ColumnName="MateriesID" />
+          <ScalarProperty Name="InBuildBatchID" ColumnName="InBuildBatchID" />
+          <ScalarProperty Name="OutBuildBatchID" ColumnName="OutBuildBatchID" />
+          <ScalarProperty Name="BuildNum" ColumnName="BuildNum" />
+          <ScalarProperty Name="MateriesTypeNum" ColumnName="MateriesTypeNum" />
+          <ScalarProperty Name="ProcessingNum" ColumnName="ProcessingNum" />
+          <ScalarProperty Name="InCount" ColumnName="InCount" />
+          <ScalarProperty Name="OutCount" ColumnName="OutCount" />
+          <ScalarProperty Name="BuildName" ColumnName="BuildName" />
+          <ScalarProperty Name="PreAdmStatus" ColumnName="PreAdmStatus" />
+          <ScalarProperty Name="PreAdmTime" ColumnName="PreAdmTime" />
+          <ScalarProperty Name="NowAdmStatus" ColumnName="NowAdmStatus" />
+          <ScalarProperty Name="NowAdmTime" ColumnName="NowAdmTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_SiteStorageBatch">
+      <EntityTypeMapping TypeName="LingYunModel.Tbl_SiteStorageBatch">
+        <MappingFragment StoreEntitySet="Tbl_SiteStorageBatch">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="MateriesID" ColumnName="MateriesID" />
+          <ScalarProperty Name="BuildBatchID" ColumnName="BuildBatchID" />
+          <ScalarProperty Name="BuildNum" ColumnName="BuildNum" />
+          <ScalarProperty Name="MateriesTypeNum" ColumnName="MateriesTypeNum" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="ProcessingNum" ColumnName="ProcessingNum" />
+          <ScalarProperty Name="BuildName" ColumnName="BuildName" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="PreAdmStatus" ColumnName="PreAdmStatus" />
+          <ScalarProperty Name="PreAdmTime" ColumnName="PreAdmTime" />
+          <ScalarProperty Name="NowAdmStatus" ColumnName="NowAdmStatus" />
+          <ScalarProperty Name="NowAdmTime" ColumnName="NowAdmTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_User">
+      <EntityTypeMapping TypeName="LingYunModel.Tbl_User">
+        <MappingFragment StoreEntitySet="Tbl_User">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CheckPwd" ColumnName="CheckPwd" />
+          <ScalarProperty Name="APP" ColumnName="APP" />
+          <ScalarProperty Name="Access" ColumnName="Access" />
+          <ScalarProperty Name="LoginPwd1" ColumnName="LoginPwd1" />
+          <ScalarProperty Name="LoginPwd2" ColumnName="LoginPwd2" />
+          <ScalarProperty Name="LoginPwd3" ColumnName="LoginPwd3" />
+          <ScalarProperty Name="LoginPwd4" ColumnName="LoginPwd4" />
+          <ScalarProperty Name="LoginPwd5" ColumnName="LoginPwd5" />
+          <ScalarProperty Name="LoginPwd6" ColumnName="LoginPwd6" />
+          <ScalarProperty Name="LoginPwd7" ColumnName="LoginPwd7" />
+          <ScalarProperty Name="LoginPwd8" ColumnName="LoginPwd8" />
+          <ScalarProperty Name="LoginPwd9" ColumnName="LoginPwd9" />
+          <ScalarProperty Name="LoginPwd10" ColumnName="LoginPwd10" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

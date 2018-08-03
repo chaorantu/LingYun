@@ -1,0 +1,415 @@
+﻿/***阳光宝盒官方预售主页***/
+.presell_header{width:980px;height:231px;}
+.presell_BoxB{width:980px;height:669px; position:relative; background:url(../images/index_presell_BoxB.jpg) no-repeat;}
+.presell_info{width:980px;position:absolute;text-align:center;top:10px;left:30px; font-size:22px;color:#fff;}
+.presell_info1{width:980px;position:absolute;text-align:center;top:60px;left:30px; font-size:22px;color:#fff;}
+.presell_btn{width:190px;height:48px;line-height:48px;font-size:20px;color:#fff;cursor:pointer; }
+.presell_btnBox{width:980px;position:absolute;top:115px;left:30px;text-align:center; }
+.presell_btnBg1{background:url(../images/index_presell_Btn1.png) no-repeat; }
+.presell_btnBg2{background:url(../images/index_presell_Btn2.png) no-repeat; }
+
+/***阳光宝盒官方主页***/
+
+/**#avatarList图片墙**/
+#avatarList{width:980px; height:588px;}
+#avatarList li{float:left; height:196px; }
+#avatarList li img{width:196px; height:196px;}
+#avatarList li.scale1_1:hover{transform: scale(1.1, 1.1);transition: all 0.2s ease 0s;-webkit-transform: scale(1.1, 1.1);-webkit-transition: all 0.2s ease 0s; box-shadow:2px 2px 2px #444; }
+
+/**翻转动画**/
+/**开始**/
+.avatarAni .startTurn{animation-duration:0.3s; animation-iteration-count:1; animation-name:startTurn; animation-timing-function:ease-in; transform-style:preserve-3d; }
+@-moz-keyframes startTurn{0% {transform:rotateY(0deg); }100% { transform:rotateY(100deg) }}
+@-webkit-keyframes startTurn{0% {transform:rotateY(0deg); }100% { transform:rotateY(100deg) }}    
+@-ms-keyframes startTurn{0% {transform:rotateY(0deg); }100% { transform:rotateY(100deg) }}   
+/**结束**/
+.avatarAni .endTurn{animation-duration:0.3s; animation-iteration-count:1; animation-name:endTurn; animation-timing-function:ease-out; transform-style:preserve-3d; }
+@-moz-keyframes endTurn{0% {transform:rotateY(270deg); }100% { transform:rotateY(360deg) }}
+@-webkit-keyframes endTurn{0% {transform:rotateY(270deg); }100% { transform:rotateY(360deg) }}    
+@-ms-keyframes endTurn{0% {transform:rotateY(270deg); }100% { transform:rotateY(360deg) }} 
+
+
+/***SunBox 阳光宝盒官方主页—预定***/
+
+/**待定**/
+.reserveList{height:309px; }
+.reserveList li{width:320px;height:309px; float:left; }
+/**待定**/
+
+.reserveListNew{height:309px; text-align:center; margin-bottom:20px; }
+.reserveListNew dd{width:314px;height:309px; border:3px solid #ccc; border-radius:8px 8px; float:left;color:#fff; cursor:pointer;}
+.reserveListNew dd strong{font-size:70px;line-height:70px; padding-top:105px; margin-bottom:15px;display: block; }
+.reserveListNew dd.selected {1border:3px solid #FFCB3E; 1background:#FEF200; }
+.reserveListNew dd.color_FF7F00{color:#FF7F00; }
+
+
+/**服务列表**/
+.reserveService{height:268px; margin-top:10px; }
+/**服务列表 左**/
+.reserveServiceL{float:left;}
+.reserveServiceR{float:right; }
+.reserveServiceL{width:213px;height:268px;}
+/**服务列表 右**/
+.reserveServiceR{width:763px;height:268px; }
+.reserveServiceR ul{width:764px;height:268px;overflow:hidden; word-break:break-all; }
+.reserveServiceR li{width:252px;float:left; }
+.reserveServiceR li.pr_3{padding-right:3px;}
+.reserveServiceR li img{width:252px;height:132px;}
+
+/**服务列表 特效**/
+.scale{box-shadow:2px 2px 2px #444; }
+
+/***购买按钮***/
+.reserveBuyBtn{width:179px; height:40px; border:none; background:url(../images/reserve_buyBtn.png) no-repeat transparent; cursor:pointer; }
+
+/**宝盒介绍**/
+.serviceBoxIntroduce{width:980px; height:196px; }
+.serviceBoxIntroduce li{width:auto; height:196px;float:left; }
+/**宝盒介绍动画效果**/
+#BoxIntroduceList li.scale1_1:hover{transform: scale(1.1, 1.1);transition: all 0.2s ease 0s;-webkit-transform: scale(1.1, 1.1);-webkit-transition: all 0.2s ease 0s; box-shadow:2px 2px 2px #444; }
+
+/**套餐介绍**/
+.reserve_details_introduceTit{height:40px;line-height:40px; margin:40px 0 20px;padding-left:20px; border-bottom:1px solid #ccc;font-size:22px;color:#000; }
+.reserve_packageBox li{margin-bottom:12px; }
+.reserve_packageBox_item{height:115px; }
+.item_tit{width:273px; height:115px;line-height: 115px;margin-right:12px;background:#EFEFEF;text-align: center; }
+/**边框的3中颜色**/
+.tit_1{border-left:5px solid #85CEDD;}
+.tit_2{border-left:5px solid #F9A755;}
+.tit_3{border-left:5px solid #E8CE5D;}
+.item_info{width:690px; height:115px;background:#EFEFEF; }
+/**横线图标**/
+.icon_line{width:52px;height:9px;padding-left:8px;padding-right:8px; }
+
+/**颜色选择**/
+.reserve_boxColor{width:646px;overflow:hidden;margin:0 auto; }
+.reserve_boxColorL,.reserve_boxColorR{}
+.reserve_boxColorL{float:left;}
+.reserve_boxColorR{float:right; }
+.ipt_radio{height:auto;margin:15px 10px 15px 25px; }
+/**X马填写**/
+.reserve_xcodeBox{height:85px; padding:0 30px; background:#E5E5E5; }
+.reserve_xcodeBox_tit{height:36px;line-height:36px; float:left;color:#E78A13;font-size:20px;padding-right:15px;}
+.ipt_xcode{width:338px;height:34px;border:1px solid #BABABA; text-indent:5px; }
+/**如何获取X马**/
+.getxCode {position:absolute;top:15px;right:0;font-size:16px; }
+.getxCode:link,.getxCode:visited,.getxCode:hover{color:#E78A13; }
+
+/**服务说明 by2013-10-22**/
+.serviceDetails{width:980px;height:302px;margin-top:15px;margin-bottom:18px; }
+.serviceDetail li{width:auto; height:136px;float:left; }
+.packageBox{height:302px;padding-bottom:10px; background:url(../images/reserve_serviceDetails_pic1.png) 25px 40px no-repeat #EFEFEF;position:relative; }
+.packageBox_info{height:302px;position:absolute;left:314px;top:0;font-size:18px;letter-spacing: 1px; }
+.packageBox_info_dl1{height:50px;}
+.packageBox_info_dl2{height:110px;}
+.packageBox_info_dl3{height:120px;}
+.packageBox_info_dl1 p, .packageBox_info_dl2 p, .packageBox_info_dl3 p{line-height:28px; }
+/**箭头**/
+.packageBox_tit{width: 200px; background:url(../images/reserve_icon_arrows.png) 190px 5px no-repeat;display:inline-block; }
+/**预定页面--独有底部版权**/
+.footerBox.mt_25{margin-top:25px; }
+
+
+/***SunBox 阳光宝盒官方主页—确认购买***/
+/**主体内容**/
+.contentBoxT, .contentBoxB{height:27px;}
+.contentBoxT{background:url(../images/purchase_topBg.png) no-repeat; text-indent:-999em; }
+.contentBoxC {height:420px; background:#EEEEEF;position:relative;}
+
+/**中间虚线**/
+.midLine{position:absolute; left:385px; top:10px; z-index:100; }
+.midLine img{height:400px;}
+/**主体内容 左**/
+.contentBoxC_left{width:390px;height: 420px; float:left;}
+.confirmMes{text-align:center ;}
+.confirmMes img.purchaseBlack, .confirmMes img.purchaseSilver{width:84px; height:32px;margin:10px 15px; }
+
+
+/**购买宝盒颜色的选择**/
+.purchaseBoxColor{height:180px; margin:40px 0; }
+.purchaseBoxColor dd{float:left; }
+.purchaseBoxColor img{width:145px; height:145px;margin-top:0; }
+.purchase_boxB{padding:0 15px 0 35px;cursor:pointer;}
+.purchase_boxW{padding:0 35px 0 15px;cursor:pointer;}
+
+/**黑色 白色**/
+.black,.white{width:145px;height:26px;line-height:26px; color:#555; display:inline-block;background:#D2D2D2;cursor:pointer; }
+.black{margin:5px 15px 10px 35px;position:relative; }
+.black label.display_block {display:block; }
+.black label.display_none {display:none; }
+.black img{width:18px; height:18px; position:absolute;left:10px; top:4px;}
+
+.white{margin:5px 35px 10px 15px;position:relative; }
+.white label.display_block {display:block; }
+.white label.display_none {display:none; }
+.white img{width:18px; height:18px; position:absolute;left:10px; top:4px;}
+
+/**购买宝盒版本**/
+.purchaseVersion{width:390px;height:77px; text-align:center; margin:10px auto; margin-bottom:30px; }
+.purchaseVersion li{height:77px;float:left;cursor:pointer;}
+.purchaseVersion img{width:111px; height:77px;margin-top:0;}
+
+/**套餐选择的背景图片**/
+.purchaseVersion li.shareVersionImg_bg{width:111px; height:77px;margin-left:16px;margin-right:6px;display:inline; background:url(../images/purchase_shareVersion.png) no-repeat; }
+.purchaseVersion li.freeVersionImg_bg{width:111px; height:77px;margin-left:6px;margin-right:6px;display:inline;background:url(../images/purchase_freeVersion.png) no-repeat;  }
+.purchaseVersion li.dignityVersionImg_bg{width:111px; height:77px;margin-left:6px;margin-right:16px;display:inline;background:url(../images/purchase_dignityVersion.png) no-repeat;  }
+
+/**套餐选中的图片 默认隐藏**/
+.purchaseVersion img.shareVersionImg{display:none;}
+.purchaseVersion img.freeVersionImg{display:none;}
+.purchaseVersion img.dignityVersionImg{display:none;}
+
+/**套餐选中的图片**/
+.purchaseVersion img.shareVersionImg.display_block{display:block;}
+.purchaseVersion img.freeVersionImg.display_block{display:block;}
+.purchaseVersion img.dignityVersionImg.display_block{display:block;}
+
+.confirmMes span{display:block; font-size:16px;}
+.rechooseBtn{width:93px;height:29px; margin-top:10px; border:none; background:url(../images/purchase_btn_pic2.png) no-repeat transparent; cursor:pointer; }
+
+/**主体内容 右**/
+.contentBoxC_right{width:590px;height: 355px; float:left;color:#8B8B8C;}
+.XcodePurchase{padding-left:30px; }
+.XcodePurchase h2 {position:relative; }
+.howgetXcode{position:absolute;color:#ACCE20;top:10px; left:200px; }
+.howgetXcode a {color:#ACCE20; }
+.howgetXcode a:link,.howgetXcode a:visited{color:#ACCE20; }
+.tablist {height:45px;line-height:45px; font-size:16px; }
+.tablist tr { }
+
+/**X码输入框**/
+.xCode_ipt{width:227px;height:30px; line-height:30px; border:none; background:url(../images/purchase_input_pic1.png) no-repeat transparent; }
+.validCode_ipt {width:72px;height:30px;line-height:30px; border:none; background:url(../images/purchase_validInput.png) no-repeat transparent; }
+.name_ipt,.telePhone_ipt{width:168px;height:30px;line-height:30px; border:none; background:url(../images/purchase_input_pic2.png) no-repeat transparent; }
+.street_ipt{width:230px;height:30px;line-height:30px; border:none; background:url(../images/purchase_input_pic1.png) no-repeat transparent; }
+
+.validCode {width:100px; position:relative; display:inline-block; }
+.validCode a{width:60px;height:25px; display:inline-block; }
+.validCode img{position:absolute;top:11px; left:10px;
+    right: 31px;
+}
+
+/**省市区**/
+.selectClass{width:170px;overflow:hidden; height:28px;line-height:28px; }
+/**确认购买**/
+.surePurchase{padding-top:20px; text-align:center; }
+.surePurchaseBtn {width:154px;height:40px; border:none; background:#EC2937;border-radius:3px;font-size:22px; font-family:微软雅黑; color:#fff; cursor:pointer; }
+
+
+/***SunBox 阳光宝盒官方主页—我是力量（我是草根）***/
+/**个人简介--1 开始**/
+.profileBox1{overflow:hidden;background:#f2f0f0; }
+.profileBox1_L, .profileBox1_R{float:left;}
+/**左边**/
+.profileBox1_L{padding-right:10px;}
+.profileImg{width:460px;padding:10px; }
+
+/**右边**/
+.profileBox1_R{padding-left:10px;}
+
+/**个人简介--1 内容**/
+.profileContentBox1{width:415px;height:345px;margin-top:40px;margin-left:10px;padding-left: 45px;}
+.profileContentBox1.mt_240{margin-top:240px; }
+.profileContent1{padding:10px; }
+.profileName1{padding-left:20px; color:#555354;font-size:40px; background:url(../images/grassRoots_arrow1.png) 0 11px no-repeat; }
+
+/**个人简介--2 内容**/
+.profileContentBox2{width:415px;height:345px;margin-top:40px; margin-left:10px; padding-right:45px;}
+.profileContent2{padding:10px; text-align:right; }
+.profileName2{padding-right:20px; color:#555354;font-size:40px; background:url(../images/grassRoots_arrow2.png) right 11px no-repeat; }
+
+/**个人简介--1 结束**/
+
+
+
+
+/***SunBox 阳光宝盒官方主页—登录 注册  直接购买***/
+#tabTit li{float:left;margin-right:2px;padding:6px; cursor:pointer;}
+#tabTit li.Tabin{ border:1px solid #ccc; border-bottom:0; background-color:#DEDEDE; z-index:100; position:relative; }
+#tabContent{overflow:hidden; border:1px solid #ccc;top:-1px;clear:left;background-color:#DEDEDE; position:relative; }
+       
+/**登录内容**/
+#loginBox{margin:30px 0; line-height:30px; font-size:16px; color:#555; }
+.loginBtn{color:#fff;font-weight:bold;border-radius:2px;height:30px;line-height:30px; }
+
+/**注册内容**/
+#registerBox{margin:30px 0; line-height:30px; font-size:16px; color:#555;  }
+
+/**直接购买 按钮**/
+.nowBuyBtn{width:130px; height:40px; margin-top:60px;-webkit-appearance: none; border-radius:3px 3px; background:#F22D00; font-family:黑体; font-size:25px; color:#fff; cursor:pointer;}
+/****==============================================================***/
+
+
+/***登录页面***/
+.loginBox{background:#DEDEDE;border-radius:8px 8px;padding:20px 0;text-align:center; margin-top:20px;}
+.loginBox table{line-height:30px; font-size:14px; }
+.loginBox table input{height:24px; }
+
+/***注册页面***/
+.registerBox{background:#DEDEDE;border-radius:8px 8px;padding:20px 0;text-align:center;margin-top:20px; }
+.registerBox table{line-height:30px; font-size:14px; }
+.registerBox table input{height:24px; }
+
+
+/***新用户入门指南页面***/
+/**用前必读**/
+.readBeforeBox{overflow:hidden;font-size:14px;line-height:22px;color:#555; }
+.readBeforeBoxL{width:430px;padding:20px 20px 20px 55px; float:left; }
+.readBeforeBoxL h1{font-size:28px;line-height:45px;font-weight: normal; }
+.readBeforeBoxL h2{font-size:15px;font-weight:bold;padding:10px 0; }
+.readBeforeBoxL p{text-indent:2em; }
+
+.readBeforeBoxR {width:445px;padding:20px 10px 20px 20px; float:right;}
+.simBox{margin:65px 0 20px;position:relative; }
+.tips{position:absolute;top:0;right:0; }
+.websiteUrl a:link,.websiteUrl a:visited{color:red; }
+.partnerBox{height:32px;line-height:32px; }
+.partnerBox span{display:inline-block;float:left; }
+
+/**介绍**/
+.introduceBox{overflow:hidden;font-size:14px;line-height:24px;color:#555;border-bottom:1px solid #ccc; }
+.introduceBoxL{width:440px;padding:20px 20px 20px 55px; float:left;position:relative;}
+.introduceBoxL h1{font-size:28px;height:42px;line-height:42px; font-weight: normal; }
+.introduceBoxL p{position:relative; }
+.introduceBoxL p .tips{top:-10px;right:170px;}
+
+.introduceBoxR{width:440px;padding:20px 10px 20px 15px; float:right;position:relative; }
+
+/**介绍 标题**/
+.introduce_tit{font-size:28px;font-weight:normal;height:42px;line-height:42px; display:inline-block;margin-top:15px; }
+
+/**步骤**/
+.stepBox{margin-top:25px; }
+.stepBox.mt_92{margin-top:92px; }
+.stepBox dl{float:left;line-height:25px; }
+.stepBox dt{font-size:15px; }
+.step{float:left;display:inline-block;height:50px; line-height:50px;padding-right:10px; font-size:25px; }
+
+/**APP下载**/
+.downloadAppBox{overflow:hidden;font-size:14px;line-height:24px;color:#555; }
+.downloadAppBoxL{width:570px;padding:20px 0 20px 55px;}
+
+.userType{margin-top:25px; }
+.userType p{position:relative; }
+.userType .tips{top:-20px;right:270px; }
+.userType label.step{height:100px;line-height:100px;vertical-align:top;padding-right:40px; }
+.userType label.step.h80{height:80px; }
+.userType ul.h80{height:80px; }
+.userType li span{padding:0 5px;}
+.userType li dl{font-size:10px;margin-top:25px;}
+.userType li dd{float:left; padding-right:5px; }
+.userType li dd img{width:25px; height:25px; padding:0 5px; }
+
+/**按键介绍**/
+.presskeyBox{padding-top:25px; }
+.presskeyBox label{display: inline-block; width: auto;float:left; vertical-align: top; padding-right: 20px; }
+.presskeyInfo{display: block; width: auto; float:left; padding-top: 5px;padding-bottom:10px; }
+.presskeyInfo p{font-family:"楷体"; font-size:12px; font-weight:bold;color:#777;line-height: 18px; }
+.presskeyBox dd{clear:both; }
+.presskeyBoxPic{position:absolute;right:58px; top:188px; }
+
+/**指示灯说明**/
+.lampBox{padding-top:25px;height:320px; }
+.lampBox li span,.lampBox li label,.lampBox li p{display:block;float:left; }
+.lampBox li{clear:both; }
+.lampBox li p{font-family:"楷体"; font-weight:bold;color:#777; }
+.lampBox li label{height:22px; font-family: Arial;}
+.lampBox li label img{padding-top:2px; }
+.lampBoxPic{position:absolute;left:50px; top:316px; }
+
+
+/***联系我们页面***/
+.contactBox{ }
+.contactBoxL, .contactBoxR{float:left; }
+/**左边**/
+.contactBoxL{width:490px;}
+.contactBoxL p{height:300px; line-height:36px;padding:40px 0 0 26px; position:relative; font-size:15px;color:#757575; background:#F2F2F2; }
+.contactBoxL_top{width:490px;height:126px; background:url(../images/contactUS_top.png) no-repeat; }
+.contactBoxL_top h2{padding-top: 85px;padding-left: 26px; color: #E60011; font-size: 34px;font-weight: bold;letter-spacing: 2px;}
+
+/**标题线**/
+.contactBoxL_topB_line{width:460px; border-top:2px solid #B9BBBA;position:absolute; top:10px; display:inline-block; text-indent:-999px; }
+
+/**右边**/
+.contactBoxR{width:490px;height:466px; background:#F2F2F2; text-align:right; }
+.contactMap{margin:70px 20px 0 0; }
+
+/***关于我们页面***/
+.aboutBox{ }
+.aboutBoxL, .aboutBoxR{float:left; }
+/**左边**/
+.aboutBoxL{width:490px;}
+.aboutBoxL p{height:300px; line-height:40px;padding:40px 5px 0 26px; position:relative; font-size:15px;color:#757575; background:#F2F2F2; }
+.aboutBoxL_top{width:490px;height:126px; background:url(../images/aboutUS_top.png) no-repeat; }
+.aboutBoxL_top h2{padding-top: 85px;padding-left: 26px; color: #E60011; font-size: 34px;font-weight: bold;letter-spacing: 2px;}
+
+/**标题线**/
+.aboutBoxL_topB_line{width:460px; border-top:2px solid #B9BBBA;position:absolute; top:10px; display:inline-block; text-indent:-999px; }
+
+/**右边**/
+.aboutBoxR{width:490px;height:466px; background:#F2F2F2; }
+.aboutBoxTit{margin:20px 0 0 0; }
+.aboutBoxPic{margin:10px 0 0 0;}
+
+
+/***X马页面***/
+.xCodeBox{position:relative; }
+.myXCode{width:227px; height:46px;line-height:44px; position:absolute;bottom:130px;left:65px;cursor:pointer;background:url(../images/xCode_myCodeBtn.png) no-repeat;color:#fff;font-size:26px;font-family:"黑体"; text-align:center;  }
+.sinaShareBtn{width:227px; height:46px;line-height:44px; position:absolute;bottom:130px;left:360px;display:inline-block; cursor:pointer;background:url(../images/xCode_shareBtn.png) no-repeat;color:#fff;font-size:22px;text-align:center; }
+.sinaShareBtn:hover{text-decoration:none; }
+1.sinaShareBtn img{width:200px;height:47px; border:0; }
+/**支持我是力量，获得X马**/
+.xCode_words{position:absolute;bottom:70px;left:125px;color:#ED7D19;font-size:20px; }
+.xCode_words a:link,.xCode_words a:visited{color:#F22D00; }
+.xCode_words a:hover{color:#F22D00; }
+
+/***用户协议页面***/
+.agreesTit{line-height:1.5em; font-size:28px;color:#E52228;font-weight:bold;1font-family:宋体; margin-bottom:10px;border-bottom:3px solid #ccc; }
+.agreesBox{line-height:28px;font-size:14px;color:#000;1font-family:宋体; }
+.agreesBox ul {list-style: disc inside none;padding-left: 20px;}
+
+/***隐私政策页面***/
+.privacyBox{margin-bottom:10px; padding:20px; line-height:28px;font-size:14px;color:#000;1font-family:宋体;width:938px;background:#F2F2F2;box-shadow:0 2px 4px #ccc; }
+.privacyBox ul {list-style: disc inside none;padding-left: 20px;}
+    
+
+/***快速了解页面***/
+.quickUnderstand_banner{width:980px;height:261px; }
+
+/**介绍1**/
+.descBox1,.descBox2{width:980px;overflow:hidden;margin:10px 0 30px;border-bottom:1px solid #ccc; }
+.descBox1_L,.descBox1_R{float:left; }
+/**左边**/
+.descBox1_L{width:400px;padding:0 20px 0 70px; }
+/**右边**/
+.descBox1_R{width:385px;padding-left:105px; }
+.descInfo{height:30px; line-height:30px; font-size:16px; }
+
+/**介绍2**/
+.descBox2_L,.descBox2_R{float:left; }
+/**左边**/
+.descBox2_L{width:325px;padding:0 95px 0 70px;text-align:right; }
+/**右边**/
+.descBox2_R{width:460px;padding-left:30px;}
+
+/**红点**/
+.descInfo li{position:relative; }
+.redDot{position:absolute;top:-3px;right:-10px;*top:10px; }
+
+/***我的X马页面***/
+.myXCodeBox{width:980px;overflow:hidden;background:url(../images/myXCode_xcodePic.png) no-repeat; }
+/**X马列表**/
+.xcodeListBox{width:500px;height:400px; background:#f2f2f2;float:right; }
+.xcodeListBox_tit{margin:20px 20px 0;padding:0 10px 5px;border-bottom:1px solid #d1d1d1;position:relative;}
+.xcodeListBox_tit strong{color:#E78A13;font-size:24px;}
+.myMoney{display:inline-block;position:absolute;right:23px;top:5px;font-size:16px;color:#000;}
+
+.xcodeList{height:250px; margin:10px 0 0 20px; }
+.xcodeList li{height:30px;line-height:30px;padding:0 10px;font-size:16px; }
+.xcodeList strong{padding-right:15px; }
+.reApplyBtn{width:196px;height:40px;line-height:40px;font-size:18px;font-family:"微软雅黑";font-weight:bold; color:#fff; background:url(../images/myXCode_applyBtn1.png) no-repeat;cursor:pointer; }
+/**再次申请按钮 灰掉**/
+.unApply{background:url(../images/myXCode_applyBtn2.png) no-repeat !important;}
+.gomall{padding-left:40px; color:#E52228;font-size:18px; }
+.gomall:link,.gomall:visited{color:#E52228;text-decoration:underline;}
+.gomall:hover{text-decoration:none;}

@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7F4FC1BC-C3AC-41FE-BC45-82188318BF15}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LingYun</RootNamespace>
+    <AssemblyName>LingYun</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\add.gif" />
+    <Content Include="Images\admin_bottom.gif" />
+    <Content Include="Images\admin_main.gif" />
+    <Content Include="Images\admin_menu.gif" />
+    <Content Include="Images\admin_text.gif" />
+    <Content Include="Images\admin_top.gif" />
+    <Content Include="Images\all_toolbar.gif" />
+    <Content Include="Images\bg_tipsAll.gif" />
+    <Content Include="Images\bg_tipsBottom.gif" />
+    <Content Include="Images\bg_tipsTop.gif" />
+    <Content Include="Images\btn_bgs.gif" />
+    <Content Include="Images\bt_close.gif" />
+    <Content Include="Images\bt_fold.gif" />
+    <Content Include="Images\butClose.gif" />
+    <Content Include="Images\butOpen.gif" />
+    <Content Include="Images\C.gif" />
+    <Content Include="Images\chanli.gif" />
+    <Content Include="Images\Controls.con-bg.gif" />
+    <Content Include="Images\Controls.List-on.left.gif" />
+    <Content Include="Images\Controls.separator.gif" />
+    <Content Include="Images\D.gif" />
+    <Content Include="Images\default.gif" />
+    <Content Include="Images\delete.gif" />
+    <Content Include="Images\digital_left.gif" />
+    <Content Include="Images\digital_side.gif" />
+    <Content Include="Images\edit.gif" />
+    <Content Include="Images\Exit.gif" />
+    <Content Include="Images\Fminus.gif" />
+    <Content Include="Images\FrameTabs_Add.gif" />
+    <Content Include="Images\fujian.gif" />
+    <Content Include="Images\guide.jpg" />
+    <Content Include="Images\Guide_bottom.gif" />
+    <Content Include="Images\guide_collapse.gif" />
+    <Content Include="Images\guide_expand.gif" />
+    <Content Include="Images\Guide_main.gif" />
+    <Content Include="Images\Guide_top.gif" />
+    <Content Include="Images\Help.gif" />
+    <Content Include="Images\help_tips.gif" />
+    <Content Include="Images\Home.gif" />
+    <Content Include="Images\I.gif" />
+    <Content Include="Images\icon.gif" />
+    <Content Include="Images\icon1.gif" />
+    <Content Include="Images\L.gif" />
+    <Content Include="Images\Lminus.gif" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\localGIF.gif" />
+    <Content Include="Images\logbj.gif" />
+    <Content Include="Images\loggl.gif" />
+    <Content Include="Images\logmm.gif" />
+    <Content Include="Images\logo.gif" />
+    <Content Include="Images\logyh.gif" />
+    <Content Include="Images\logyz.gif" />
+    <Content Include="Images\meettingtitle.gif" />
+    <Content Include="Images\meettingtitlebg.gif" />
+    <Content Include="Images\m_box_in.gif" />
+    <Content Include="Images\m_box_out.gif" />
+    <Content Include="Images\m_box_recycle.gif" />
+    <Content Include="Images\m_draft.gif" />
+    <Content Include="Images\m_new.gif" />
+    <Content Include="Images\m_sms_n.gif" />
+    <Content Include="Images\m_sms_y.gif" />
+    <Content Include="Images\noread.gif" />
+    <Content Include="Images\prompt-note-ico.gif" />
+    <Content Include="Images\prompt-note-off.gif" />
+    <Content Include="Images\prompt-note-on.gif" />
+    <Content Include="Images\prompt-note-tit-bg.gif" />
+    <Content Include="Images\read.gif" />
+    <Content Include="Images\refresh.gif" />
+    <Content Include="Images\scroll-left.gif" />
+    <Content Include="Images\scroll-right.gif" />
+    <Content Include="Images\seg_left.gif" />
+    <Content Include="Images\seg_side.gif" />
+    <Content Include="Images\space.gif" />
+    <Content Include="Images\SubMenuDivbg.gif" />
+    <Content Include="Images\T.gif" />
+    <Content Include="Images\T2.gif" />
+    <Content Include="Images\tab-close.gif" />
+    <Content Include="Images\tab-strip-bg.gif" />
+    <Content Include="Images\tableft.gif" />
+    <Content Include="Images\tabright.gif" />
+    <Content Include="Images\tabs-sprite.gif" />
+    <Content Include="Images\title.gif" />
+    <Content Include="Images\titlebg1.gif" />
+    <Content Include="Images\titlebg2.gif" />
+    <Content Include="Images\topbg.gif" />
+    <Content Include="Images\TopQuick01.gif" />
+    <Content Include="Images\TopQuick02.gif" />
+    <Content Include="Images\TopQuick03.gif" />
+    <Content Include="Images\TopQuick04.gif" />
+    <Content Include="Images\view.gif" />
+    <Content Include="includes\AdminIndex.js" />
+    <Content Include="includes\CommonCode.js" />
+    <Content Include="includes\FrameTab.js" />
+    <Content Include="includes\Guide.css" />
+    <Content Include="includes\index.css" />
+    <Content Include="includes\jquery.pack.js" />
+    <Content Include="includes\Login.css" />
+    <Content Include="includes\MasterPage.css" />
+    <Content Include="includes\xtree.css" />
+    <None Include="Service References\LingYunService\LingYunService.disco" />
+    <None Include="Service References\LingYunService\configuration91.svcinfo" />
+    <None Include="Service References\LingYunService\configuration.svcinfo" />
+    <None Include="Service References\LingYunService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web\Css\admin.css" />
+    <Content Include="Web\Css\Default.css" />
+    <Content Include="Web\Css\index.css" />
+    <Content Include="Web\Css\public.css" />
+    <Content Include="Web\Css\User_Login.css" />
+    <Content Include="Web\Css\xtree.css" />
+    <Content Include="Web\Global.asax" />
+    <Content Include="Web\Header.aspx" />
+    <Content Include="Web\Images\2.jpg" />
+    <Content Include="Web\Images\addNote.gif" />
+    <Content Include="Web\Images\admin_p.gif" />
+    <Content Include="Web\Images\bg.gif" />
+    <Content Include="Web\Images\bgs.jpg" />
+    <Content Include="Web\Images\bg_banner_menu.gif" />
+    <Content Include="Web\Images\bg_button_blue.gif" />
+    <Content Include="Web\Images\bg_button_del.gif" />
+    <Content Include="Web\Images\bg_button_update.gif" />
+    <Content Include="Web\Images\bg_header.gif" />
+    <Content Include="Web\Images\bg_left_bc.gif" />
+    <Content Include="Web\Images\bg_left_bl.gif" />
+    <Content Include="Web\Images\bg_left_br.gif" />
+    <Content Include="Web\Images\bg_left_ls.gif" />
+    <Content Include="Web\Images\bg_left_rs.gif" />
+    <Content Include="Web\Images\bg_left_tc.gif" />
+    <Content Include="Web\Images\bg_left_tl.gif" />
+    <Content Include="Web\Images\bg_left_tr.gif" />
+    <Content Include="Web\Images\bg_login.png" />
+    <Content Include="Web\Images\bg_login_panel.gif" />
+    <Content Include="Web\Images\bg_login_panel.png" />
+    <Content Include="Web\Images\bg_nav.gif" />
+    <Content Include="Web\Images\bg_rectbtn.png" />
+    <Content Include="Web\Images\bg_schedule.gif" />
+    <Content Include="Web\Images\bg_tabedbtn.gif" />
+    <Content Include="Web\Images\bg_table_item.gif" />
+    <Content Include="Web\Images\bg_table_item2.gif" />
+    <Content Include="Web\Images\bg_th.gif" />
+    <Content Include="Web\Images\bg_title.gif" />
+    <Content Include="Web\Images\bg_tr.gif" />
+    <Content Include="Web\Images\bg_users.gif" />
+    <Content Include="Web\Images\bt_login.gif" />
+    <Content Include="Web\Images\delete.gif" />
+    <Content Include="Web\Images\edit.gif" />
+    <Content Include="Web\Images\header_bg.jpg" />
+    <Content Include="Web\Images\header_left.jpg" />
+    <Content Include="Web\Images\header_right.jpg" />
+    <Content Include="Web\Images\icos.png" />
+    <Content Include="Web\Images\index.css" />
+    <Content Include="Web\Images\lastUpdate_icon_open.png" />
+    <Content Include="Web\Images\login.css" />
+    <Content Include="Web\Images\login_1.jpg" />
+    <Content Include="Web\Images\login_2.jpg" />
+    <Content Include="Web\Images\login_3.jpg" />
+    <Content Include="Web\Images\login_4.jpg" />
+    <Content Include="Web\Images\login_5.jpg" />
+    <Content Include="Web\Images\login_6.gif" />
+    <Content Include="Web\Images\login_main.png" />
+    <Content Include="Web\Images\login_root.png" />
+    <Content Include="Web\Images\logo.png" />
+    <Content Include="Web\Images\mail.gif" />
+    <Content Include="Web\Images\main_fs.gif" />
+    <Content Include="Web\Images\main_hb.gif" />
+    <Content Include="Web\Images\main_hl.gif" />
+    <Content Include="Web\Images\main_hl2.gif" />
+    <Content Include="Web\Images\main_hr.gif" />
+    <Content Include="Web\Images\main_lf.gif" />
+    <Content Include="Web\Images\main_ls.gif" />
+    <Content Include="Web\Images\main_rc.gif" />
+    <Content Include="Web\Images\main_rf.gif" />
+    <Content Include="Web\Images\main_rs.gif" />
+    <Content Include="Web\Images\menu_bg.jpg" />
+    <Content Include="Web\Images\menu_bt.jpg" />
+    <Content Include="Web\Images\menu_icon.gif" />
+    <Content Include="Web\Images\menu_seprator.gif" />
+    <Content Include="Web\Images\minicalendar\ic_enter.png" />
+    <Content Include="Web\Images\minicalendar\lastUpdate_icon_close.png" />
+    <Content Include="Web\Images\minicalendar\lastUpdate_icon_open.png" />
+    <Content Include="Web\Images\minicalendar\mall_icon_goTop.png" />
+    <Content Include="Web\Images\minicalendar\minical_btnClose.gif" />
+    <Content Include="Web\Images\minicalendar\minical_btnForward.gif" />
+    <Content Include="Web\Images\minicalendar\minical_btnPrevious.gif" />
+    <Content Include="Web\Images\minicalendar\minical_title.gif" />
+    <Content Include="Web\Images\nav_back.gif" />
+    <Content Include="Web\Images\nav_changePassword.gif" />
+    <Content Include="Web\Images\nav_forward.gif" />
+    <Content Include="Web\Images\nav_help.gif" />
+    <Content Include="Web\Images\nav_pre.gif" />
+    <Content Include="Web\Images\nav_print.gif" />
+    <Content Include="Web\Images\nav_resetPassword.gif" />
+    <Content Include="Web\Images\nav_search.gif" />
+    <Content Include="Web\Images\note.gif" />
+    <Content Include="Web\Images\public.css" />
+    <Content Include="Web\Images\shadow_bg.jpg" />
+    <Content Include="Web\Images\title_bg1.jpg" />
+    <Content Include="Web\Images\title_bg2.jpg" />
+    <Content Include="Web\Images\tree\arrow_collapsed.gif" />
+    <Content Include="Web\Images\tree\arrow_collapsed_hover.gif" />
+    <Content Include="Web\Images\tree\arrow_expanded.gif" />
+    <Content Include="Web\Images\tree\arrow_expanded_hover.gif" />
+    <Content Include="Web\Images\tree\branch_node.gif" />
+    <Content Include="Web\Images\tree\btn_close.gif" />
+    <Content Include="Web\Images\tree\btn_close.png" />
+    <Content Include="Web\Images\tree\empty.gif" />
+    <Content Include="Web\Images\tree\folder_closed.gif" />
+    <Content Include="Web\Images\tree\folder_open.gif" />
+    <Content Include="Web\Images\tree\root_node.gif" />
+    <Content Include="Web\Images\tree\tree_node.gif" />
+    <Content Include="Web\Images\tree\user_node.gif" />
+    <Content Include="Web\Images\user_bottom_c.gif" />
+    <Content Include="Web\Images\user_bottom_l.gif" />
+    <Content Include="Web\Images\user_bottom_r.gif" />
+    <Content Include="Web\Images\user_botton.gif" />
+    <Content Include="Web\Images\user_login_name.gif" />
+    <Content Include="Web\Images\user_login_password.gif" />
+    <Content Include="Web\Images\user_login_validatecode.gif" />
+    <Content Include="Web\Images\user_main_c.gif" />
+    <Content Include="Web\Images\user_main_l.gif" />
+    <Content Include="Web\Images\user_main_r.gif" />
+    <Content Include="Web\Images\user_top_c.gif" />
+    <Content Include="Web\Images\user_top_l.gif" />
+    <Content Include="Web\Images\user_top_r.gif" />
+    <Content Include="Web\index.aspx" />
+    <Content Include="Web\JS\cookieHelper.js" />
+    <Content Include="Web\JS\jquery-1.3.2.min.js" />
+    <Content Include="Web\JS\jquery-1.5.min.js" />
+    <Content Include="Web\JS\jquery-1.6.1.js" />
+    <Content Include="Web\JS\jquery.autocomplete-min.js" />
+    <Content Include="Web\JS\jquery.autocomplete.js" />
+    <Content Include="Web\JS\min_window_show.js" />
+    <Content Include="Web\JS\MoveObj.js" />
+    <Content Include="Web\JS\OverScreen.js" />
+    <Content Include="Web\JS\pageHelper.js" />
+    <Content Include="Web\JS\SetObjCenter.js" />
+    <Content Include="Web\JS\styles.css" />
+    <Content Include="Web\Menu.aspx" />
+    <Content Include="Web\Status2.aspx" />
+    <Content Include="Web\UserLogin.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Masters\ContentTemplate.Master.cs">
+      <DependentUpon>ContentTemplate.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Masters\MenuTemplate.Master.cs">
+      <DependentUpon>MenuTemplate.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\LingYunService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Header.aspx.cs">
+      <DependentUpon>Header.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Header.aspx.designer.cs">
+      <DependentUpon>Header.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Status2.aspx.cs">
+      <DependentUpon>Status2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Status2.aspx.designer.cs">
+      <DependentUpon>Status2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\UserLogin.aspx.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\UserLogin.aspx.designer.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\m_sms_y.psd" />
+    <Content Include="Masters\ContentTemplate.Master" />
+    <Content Include="Masters\MenuTemplate.Master" />
+    <None Include="Service References\LingYunService\LingYunService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LingYun.Common\LingYun.Common.csproj">
+      <Project>{550C99BE-9262-4385-BBCA-182BD1454A0B}</Project>
+      <Name>LingYun.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LingYun.Data\LingYun.Data.csproj">
+      <Project>{CDB8E33A-B947-4DF3-90CF-096FC1F61863}</Project>
+      <Name>LingYun.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LingYun.Helper\LingYun.Helper.csproj">
+      <Project>{D9021B7D-0A35-4088-AA2A-FC922F61FD9C}</Project>
+      <Name>LingYun.Helper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\LingYunService\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2723</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

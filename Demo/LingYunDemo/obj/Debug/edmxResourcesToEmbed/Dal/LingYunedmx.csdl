@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LingYunModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="LingYunEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Tbl_Materies" EntityType="LingYunModel.Tbl_Materies" />
+    <EntitySet Name="Tbl_User" EntityType="LingYunModel.Tbl_User" />
+    <EntitySet Name="sysdiagrams" EntityType="LingYunModel.sysdiagrams" />
+    <EntitySet Name="Tbl_Plan" EntityType="LingYunModel.Tbl_Plan" />
+    <EntitySet Name="Tbl_InMaries" EntityType="LingYunModel.Tbl_InMaries" />
+    <EntitySet Name="Tbl_CenterStorage" EntityType="LingYunModel.Tbl_CenterStorage" />
+    <EntitySet Name="Tbl_CenterStorageBatch" EntityType="LingYunModel.Tbl_CenterStorageBatch" />
+    <EntitySet Name="Tbl_OutCenterStorage" EntityType="LingYunModel.Tbl_OutCenterStorage" />
+    <EntitySet Name="Tbl_OutProductBatch" EntityType="LingYunModel.Tbl_OutProductBatch" />
+    <EntitySet Name="Tbl_OutSiteStorage" EntityType="LingYunModel.Tbl_OutSiteStorage" />
+    <EntitySet Name="Tbl_ProductBatch" EntityType="LingYunModel.Tbl_ProductBatch" />
+    <EntitySet Name="Tbl_ProductStorage" EntityType="LingYunModel.Tbl_ProductStorage" />
+    <EntitySet Name="Tbl_SiteStorage" EntityType="LingYunModel.Tbl_SiteStorage" />
+    <EntitySet Name="Tbl_SiteStorageBatch" EntityType="LingYunModel.Tbl_SiteStorageBatch" />
+    <EntitySet Name="Tbl_BarCodeBatch" EntityType="LingYunModel.Tbl_BarCodeBatch" />
+    <EntitySet Name="Tbl_BarCodeInfo" EntityType="LingYunModel.Tbl_BarCodeInfo" />
+  </EntityContainer>
+  <EntityType Name="Tbl_Materies">
+    <Key>
+      <PropertyRef Name="MateriesID" />
+    </Key>
+    <Property Name="PlanID" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" />
+    <Property Name="BuildNum" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ProjectName" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="BuildName" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="MateriesType" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="ProcessingNum" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="TotalNum" Type="Int32" Nullable="false" />
+    <Property Name="BeforeAdmStatus" Type="Int32" Nullable="false" />
+    <Property Name="NowAdmStatus" Type="Int32" Nullable="false" />
+    <Property Name="PreDate" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="NowDate" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="MateriesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Tbl_User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="LoginPwd" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="CheckPwd" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="APP" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="Access" Type="Int32" Nullable="false" />
+    <Property Name="LoginPwd1" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="LoginPwd2" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="LoginPwd3" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="LoginPwd4" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="LoginPwd5" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="LoginPwd6" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="LoginPwd7" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="LoginPwd8" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="LoginPwd9" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="LoginPwd10" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="principal_id" Nullable="false" />
+    <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="version" />
+    <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Tbl_Plan">
+    <Key>
+      <PropertyRef Name="PlanID" />
+    </Key>
+    <Property Type="Int32" Name="PlanID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="PlanDate" Nullable="false" />
+    <Property Type="Int32" Name="Planer" />
+    <Property Type="Int32" Name="PlanerStatus" Nullable="false" />
+    <Property Type="Int32" Name="PlanAdm" />
+    <Property Type="Int32" Name="PlanAdmStatus" Nullable="false" />
+    <Property Type="Int32" Name="DesignAdm" />
+    <Property Type="Int32" Name="DesignAdmStatus" Nullable="false" />
+    <Property Type="Int32" Name="ProductAdm" />
+    <Property Type="Int32" Name="ProductAdmStatus" Nullable="false" />
+    <Property Type="Int32" Name="CenterStorageAdm" />
+    <Property Type="Int32" Name="CenterStorageAdmStatus" Nullable="false" />
+    <Property Type="Int32" Name="SiteStorageAdm" />
+    <Property Type="Int32" Name="SiteStorageAdmStatus" Nullable="false" />
+    <Property Type="Int32" Name="SiteGetAdm" />
+    <Property Type="Int32" Name="SiteGetAdmStatus" />
+    <Property Type="String" Name="ProjectName" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_InMaries">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="TableName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Num" />
+    <Property Type="String" Name="MapId" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BuildId" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Count" />
+  </EntityType>
+  <EntityType Name="Tbl_CenterStorage">
+    <Key>
+      <PropertyRef Name="BuildBatchID" />
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="PlanID" Nullable="false" />
+    <Property Type="Int32" Name="MateriesTasbleID" Nullable="false" />
+    <Property Type="String" Name="BuildID" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="BuildBatchID" Nullable="false" />
+    <Property Type="DateTime" Name="Time" />
+    <Property Type="String" Name="ProjectName" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BuildName" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="MateriesID" Nullable="false" />
+    <Property Type="String" Name="MateriesType" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WorkMapID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Count" Nullable="false" />
+    <Property Type="Int32" Name="PreAdmStatus" Nullable="false" />
+    <Property Type="DateTime" Name="PreAdmTime" />
+    <Property Type="Int32" Name="NowAdmStatus" Nullable="false" />
+    <Property Type="DateTime" Name="NowAdmTime" />
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="InCount" />
+  </EntityType>
+  <EntityType Name="Tbl_CenterStorageBatch">
+    <Key>
+      <PropertyRef Name="BuildBatchID" />
+    </Key>
+    <Property Type="Int32" Name="PlanID" Nullable="false" />
+    <Property Type="Int32" Name="MateriesTasbleID" Nullable="false" />
+    <Property Type="String" Name="BuildID" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="BuildBatchID" Nullable="false" />
+    <Property Type="DateTime" Name="Time" />
+    <Property Type="String" Name="ProjectName" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BuildName" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="MateriesID" Nullable="false" />
+    <Property Type="String" Name="MateriesType" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WorkMapID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Count" Nullable="false" />
+    <Property Type="Int32" Name="PreAdmStatus" Nullable="false" />
+    <Property Type="DateTime" Name="PreAdmTime" />
+    <Property Type="Int32" Name="NowAdmStatus" Nullable="false" />
+    <Property Type="DateTime" Name="NowAdmTime" />
+  </EntityType>
+  <EntityType Name="Tbl_OutCenterStorage">
+    <Key>
+      <PropertyRef Name="BuildBatchID" />
+    </Key>
+    <Property Type="Int32" Name="PlanID" Nullable="false" />
+    <Property Type="Int32" Name="MateriesTasbleID" Nullable="false" />
+    <Property Type="String" Name="BuildID" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="BuildBatchID" Nullable="false" />
+    <Property Type="DateTime" Name="Time" />
+    <Property Type="String" Name="ProjectName" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BuildName" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="MateriesID" Nullable="false" />
+    <Property Type="String" Name="MateriesType" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WorkMapID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Count" Nullable="false" />
+    <Property Type="Int32" Name="PreAdmStatus" Nullable="false" />
+    <Property Type="DateTime" Name="PreAdmTime" />
+    <Property Type="Int32" Name="NowAdmStatus" Nullable="false" />
+    <Property Type="DateTime" Name="NowAdmTime" />
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Tbl_OutProductBatch">
+    <Key>
+      <PropertyRef Name="BuildBatchID" />
+    </Key>
+    <Property Type="Int32" Name="PlanID" Nullable="false" />
+    <Property Type="Int32" Name="MateriesTasbleID" Nullable="false" />
+    <Property Type="String" Name="BuildID" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="BuildBatchID" Nullable="false" />
+    <Property Type="DateTime" Name="Time" />
+    <Property Type="String" Name="ProjectName" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BuildName" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="MateriesID" Nullable="false" />
+    <Property Type="String" Name="MateriesType" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WorkMapID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Count" Nullable="false" />
+    <Property Type="Int32" Name="PreAdmStatus" Nullable="false" />
+    <Property Type="DateTime" Name="PreAdmTime" />
+    <Property Type="Int32" Name="NowAdmStatus" Nullable="false" />
+    <Property Type="DateTime" Name="NowAdmTime" />
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Tbl_OutSiteStorage">
+    <Key>
+      <PropertyRef Name="BuildBatchID" />
+    </Key>
+    <Property Type="Int32" Name="PlanID" Nullable="false" />
+    <Property Type="Int32" Name="MateriesTasbleID" Nullable="false" />
+    <Property Type="String" Name="BuildID" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="BuildBatchID" Nullable="false" />
+    <Property Type="DateTime" Name="Time" />
+    <Property Type="String" Name="ProjectName" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BuildName" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="MateriesID" Nullable="false" />
+    <Property Type="String" Name="MateriesType" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WorkMapID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Count" Nullable="false" />
+    <Property Type="Int32" Name="PreAdmStatus" Nullable="false" />
+    <Property Type="DateTime" Name="PreAdmTime" />
+    <Property Type="Int32" Name="NowAdmStatus" Nullable="false" />
+    <Property Type="DateTime" Name="NowAdmTime" />
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Tbl_ProductBatch">
+    <Key>
+      <PropertyRef Name="BuildBatchID" />
+    </Key>
+    <Property Type="Int32" Name="PlanID" Nullable="false" />
+    <Property Type="Int32" Name="MateriesTasbleID" Nullable="false" />
+    <Property Type="String" Name="BuildID" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Time" />
+    <Property Type="String" Name="ProjectName" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BuildName" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="MateriesID" Nullable="false" />
+    <Property Type="String" Name="MateriesType" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WorkMapID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Count" Nullable="false" />
+    <Property Type="Int32" Name="PreAdmStatus" Nullable="false" />
+    <Property Type="DateTime" Name="PreAdmTime" />
+    <Property Type="Int32" Name="NowAdmStatus" Nullable="false" />
+    <Property Type="DateTime" Name="NowAdmTime" />
+    <Property Type="Int64" Name="BuildBatchID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Tbl_ProductStorage">
+    <Key>
+      <PropertyRef Name="BuildBatchID" />
+    </Key>
+    <Property Type="Int32" Name="PlanID" Nullable="false" />
+    <Property Type="Int32" Name="MateriesTasbleID" Nullable="false" />
+    <Property Type="String" Name="BuildID" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="BuildBatchID" Nullable="false" />
+    <Property Type="DateTime" Name="Time" />
+    <Property Type="String" Name="ProjectName" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BuildName" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="MateriesID" Nullable="false" />
+    <Property Type="String" Name="MateriesType" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WorkMapID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Count" Nullable="false" />
+    <Property Type="Int32" Name="PreAdmStatus" Nullable="false" />
+    <Property Type="DateTime" Name="PreAdmTime" />
+    <Property Type="Int32" Name="NowAdmStatus" Nullable="false" />
+    <Property Type="DateTime" Name="NowAdmTime" />
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="InCount" />
+  </EntityType>
+  <EntityType Name="Tbl_SiteStorage">
+    <Key>
+      <PropertyRef Name="BuildBatchID" />
+    </Key>
+    <Property Type="Int32" Name="PlanID" Nullable="false" />
+    <Property Type="Int32" Name="MateriesTasbleID" Nullable="false" />
+    <Property Type="String" Name="BuildID" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="BuildBatchID" Nullable="false" />
+    <Property Type="DateTime" Name="Time" />
+    <Property Type="String" Name="ProjectName" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BuildName" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="MateriesID" Nullable="false" />
+    <Property Type="String" Name="MateriesType" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WorkMapID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Count" Nullable="false" />
+    <Property Type="Int32" Name="PreAdmStatus" Nullable="false" />
+    <Property Type="DateTime" Name="PreAdmTime" />
+    <Property Type="Int32" Name="NowAdmStatus" Nullable="false" />
+    <Property Type="DateTime" Name="NowAdmTime" />
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="InCount" />
+  </EntityType>
+  <EntityType Name="Tbl_SiteStorageBatch">
+    <Key>
+      <PropertyRef Name="BuildBatchID" />
+    </Key>
+    <Property Type="Int32" Name="PlanID" Nullable="false" />
+    <Property Type="Int32" Name="MateriesTasbleID" Nullable="false" />
+    <Property Type="String" Name="BuildID" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="BuildBatchID" Nullable="false" />
+    <Property Type="DateTime" Name="Time" />
+    <Property Type="String" Name="ProjectName" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BuildName" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="MateriesID" Nullable="false" />
+    <Property Type="String" Name="MateriesType" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WorkMapID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Count" Nullable="false" />
+    <Property Type="Int32" Name="PreAdmStatus" Nullable="false" />
+    <Property Type="DateTime" Name="PreAdmTime" />
+    <Property Type="Int32" Name="NowAdmStatus" Nullable="false" />
+    <Property Type="DateTime" Name="NowAdmTime" />
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Tbl_BarCodeBatch">
+    <Key>
+      <PropertyRef Name="BarCodeBatchID" />
+    </Key>
+    <Property Type="Int64" Name="BarCodeBatchID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="BuildBatchID" Nullable="false" />
+    <Property Type="String" Name="BarCodeNo" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreateTime" Nullable="false" />
+    <Property Type="Int16" Name="BarCodeType" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tbl_BarCodeInfo">
+    <Key>
+      <PropertyRef Name="BarCodeInfoID" />
+    </Key>
+    <Property Type="Int64" Name="BarCodeInfoID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="BarCodeBatchID" Nullable="false" />
+    <Property Type="DateTime" Name="CreateTime" Nullable="false" />
+    <Property Type="String" Name="ProjectName" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BuildName" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MateriesType" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WorkMapID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

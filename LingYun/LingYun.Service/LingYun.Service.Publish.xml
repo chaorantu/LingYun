@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="http://localhost:82" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="配置文件1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="06/05/2014 19:07:46" />
+    <file relUrl="bin/LingYun.Business.pdb" publishTime="06/05/2014 17:59:00" />
+    <file relUrl="bin/LingYun.Common.dll" publishTime="06/05/2014 17:59:00" />
+    <file relUrl="bin/LingYun.Data.pdb" publishTime="06/05/2014 17:58:59" />
+    <file relUrl="bin/LingYun.Service.pdb" publishTime="06/05/2014 19:17:46" />
+    <file relUrl="bin/LingYun.Lib.pdb" publishTime="06/05/2014 17:59:01" />
+    <file relUrl="bin/LingYun.Dal.pdb" publishTime="06/05/2014 17:59:00" />
+    <file relUrl="bin/LingYun.Common.pdb" publishTime="06/05/2014 17:59:00" />
+    <file relUrl="bin/LingYun.Dal.dll" publishTime="06/05/2014 17:59:00" />
+    <file relUrl="bin/LingYun.Data.dll" publishTime="06/05/2014 17:58:59" />
+    <file relUrl="bin/LingYun.Business.dll" publishTime="06/05/2014 17:59:01" />
+    <file relUrl="LingYunService.asmx" publishTime="06/05/2014 15:38:45" />
+    <file relUrl="bin/LingYun.Service.dll" publishTime="06/05/2014 19:17:46" />
+    <file relUrl="bin/LingYun.Lib.dll" publishTime="06/05/2014 17:59:01" />
+  </publishProfile>
+</publishData>
